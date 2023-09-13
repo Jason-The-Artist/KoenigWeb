@@ -8,9 +8,12 @@
 }*/
 
 .nav{
-  width: 100%;
+  width: 60%;
   height: 50px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.64);
+}
+
+.nav-height{
+  height: 50px;
 }
 
 .outer-nav{
@@ -20,7 +23,10 @@
 
 .nav-element{
   background: #ffffff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.64);
+}
+
+.nav-round-corner{
+  border-radius: 10px;
 }
 
 .info-nav{
@@ -48,6 +54,10 @@
   transition: transform 250ms;
 }
 
+.nav-info-text{
+  font-size: 22px;
+}
+
 .nav-module:hover{
   transform: scale(1.2,1.2);
 
@@ -68,12 +78,24 @@
 }
 
 .nav-logo{
-  width: 400px;
+  width: 100%;
   object-fit: contain;
 }
 
 .info-nav-text{
   font-size: 23px;
+}
+
+.logo-element-margin{
+  margin-left: 300px
+}
+
+.info-element-margin{
+  margin-left: 70vw
+}
+
+.nav-logo-element{
+  width: 20%
 }
 
 
@@ -92,54 +114,71 @@
   }
 }
 
-@media (max-width: 880px) {
-  .info-nav-space{
-    width: 30px;
-  }
-}
 
-
-@media (max-width: 740px) {
-  .info-nav-logo{
-    width: 35vw;
-  }
-
-  .info-nav-text{
-    font-size: 3.3vw;
-  }
-}
-
-
-@media (max-width: 670px) {
-  .info-nav{
-    height: 12vw;
-  }
-}
-
-@media (max-width: 620px) {
+@media (max-width: 1450px) {
 
   .nav-module{
     font-weight: normal;
-    font-size: 3.0vw;
+    font-size: 1.6vw;
   }
-  .nav-sub{
-    width: 70vw;
+  .nav-height{
+    height: 3.5vw;
   }
+}
 
-  .nav{
-    height: 6vw;
-  }
-
-  .nav-space{
-    width: 20px;
+@media (max-width: 1330px) {
+  .nav-info-text{
+    font-size: 1.6vw;
   }
 
-  @media (max-width: 440px) {
-    .info-nav-text{
-      font-size: 3vw;
-    }
+  .nav-logo{
+    width: 300px;
   }
 
+  .nav-logo-element{
+    width: 350px;
+    border-radius: 10px;
+  }
+}
 
+@media (max-width: 1050px) {
+  .nav-module{
+    font-size: 1.45vw;
+  }
+}
 
+@media (max-width: 920px) {
+  .nav-module{
+    visibility: hidden;
+  }
+
+  .nav-info-element{
+    height: 40px;
+  }
+
+  .nav-info-text{
+    visibility: hidden;
+  }
+
+  .nav-round-corner{
+    border-radius: 0px;
+  }
+
+  .nav-logo-element{
+    width: 400px;
+    border-radius: 10px;
+  }
+  .nav-height{
+    height: 40px;
+  }
+
+  .nav-logo{
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo{
+    width: 200px;
+  }
 }
