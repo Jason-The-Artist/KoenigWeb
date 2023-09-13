@@ -1,0 +1,59 @@
+.logo-green{
+    color: #95c221;
+}
+
+.logo-green-background{
+    background: #95c221;
+}
+
+.logo-red{
+    color: #bd1620;
+}
+
+.logo-red-background{
+    background: #bd1620;
+}
+
+.logo-grey{
+    color: #575755;
+}
+
+.logo-grey-background{
+    background: #575755;
+}
+
+.black{
+    color: #000000;
+}
+
+.background-black{
+    background: #000000;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.white-background{
+    background: #ffffff;
+}
+
+.popup-background{
+    background-color: #ffffff;
+}
+
+.teaser-color{
+    color: #A3A3A3;
+}
+
+.decent-color{
+    color: #5e5e5e;
+}
+
+.complementary-color{
+    color: #FF9900;
+}
+
+.error-color{
+    color: #ff0000;
+}
