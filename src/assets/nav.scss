@@ -25,6 +25,18 @@
   background: #ffffff;
 }
 
+.nav-info-width{
+  width: 25%
+}
+
+.nav-right-space-width{
+  width: 5%
+}
+
+.nav-middle-width{
+  width: 45%
+}
+
 .nav-round-corner{
   border-radius: 10px;
 }
@@ -46,6 +58,19 @@
   height: 50px;
 }
 
+.nav-box-module{
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: transform 250ms;
+}
+
+.nav-box-module:hover{
+  transform: scale(1.2,1.2);
+
+}
+
 .nav-module{
   font-size: 25px;
   font-weight: bold;
@@ -54,13 +79,13 @@
   transition: transform 250ms;
 }
 
-.nav-info-text{
-  font-size: 22px;
-}
-
 .nav-module:hover{
   transform: scale(1.2,1.2);
 
+}
+
+.nav-info-text{
+  font-size: 22px;
 }
 
 .nav-sub{
@@ -98,22 +123,59 @@
   width: 20%
 }
 
+.nav-menu-image{
+  visibility: collapse;
+}
+
+.nav-a-module{
+  width: 100%;
+}
+
+.nav-a-module:hover{
+  background: #eeeeee;
+}
 
 
 
 
-@keyframes nav-gradient-flow{
+.nav-box {
+  width: 85vw;
+  height: 180px;
+  transition: height 1s;
+  opacity: 0;
+  box-shadow: 0px 0px 10px #222222;
+}
+
+.nav-box.off {
+  animation: hideBox 1s forwards;
+}
+.nav-box.on {
+  animation: showBox 1s forwards;
+}
+
+
+
+
+
+
+
+@keyframes showBox {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 1;
   }
 }
 
+@keyframes hideBox {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 @media (max-width: 1450px) {
 
@@ -175,6 +237,35 @@
   .nav-logo{
     width: 300px;
   }
+
+  .nav-info-width{
+    width: 0%
+  }
+
+  .nav-right-space-width{
+    width: 75%
+  }
+  .nav-middle-width{
+    width: 0%
+  }
+
+  .nav-menu-image{
+    visibility: visible;
+    object-fit: contain;
+  }
+
+  .nav-menu-icon{
+    width: 40px;
+    content: url("menu.png");
+  }
+
+  .nav-cross-icon{
+    margin-right: 5px;
+    width: 30px;
+    content: url("cross.png");
+  }
+
+
 }
 
 @media (max-width: 480px) {

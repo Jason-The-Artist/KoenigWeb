@@ -5,6 +5,7 @@ import VueCookies from 'vue-cookies'
 import './assets/main.css'
 import './assets/colors.css'
 import './assets/nav.scss'
+import './assets/view.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'

@@ -14,6 +14,14 @@
     background: #bd1620;
 }
 
+.decent-red{
+    color: #fff3f5;
+}
+
+.decent-red-background{
+    background: #fff3f5;
+}
+
 .logo-grey{
     color: #575755;
 }
@@ -47,11 +55,15 @@
 }
 
 .decent-color{
-    color: #5e5e5e;
+    color: #c2c2c2;
 }
 
-.complementary-color{
+.orange{
     color: #FF9900;
+}
+
+.orange-background{
+    background: #FF9900;
 }
 
 .error-color{
