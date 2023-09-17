@@ -140,7 +140,7 @@
 
 .nav-box {
   width: 85vw;
-  height: 180px;
+  height: 220px;
   transition: height 1s;
   opacity: 0;
   box-shadow: 0px 0px 10px #222222;
@@ -151,6 +151,11 @@
 }
 .nav-box.on {
   animation: showBox 1s forwards;
+}
+
+
+.nav-box.none{
+  visibility: hidden;
 }
 
 

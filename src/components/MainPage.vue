@@ -1,9 +1,9 @@
 <template>
-<div class="center-horizontal">
+<div ref="root" class="center-horizontal show-page">
   <div class="fullwidth">
     <div class="relative">
       <div class="fullwidth absolute overflow-hidden">
-        <img src="../assets/sample2.png" class="main-image overflow-hidden">
+        <ImageSwipe/>
       </div>
       <div class="absolute center-horizontal fullwidth">
         <div>
@@ -47,16 +47,16 @@
 
 
 
-              <div style="height: 200px"></div>
+              <div style="height: 100px"></div>
             </div>
           </div>
-          <div style="height: 200px"></div>
+          <div style="height: 100px"></div>
         </div>
       </div>
       <div class="absolute center-horizontal">
         <div class="fullwidth">
           <div style="height: 70px"></div>
-          <MainNav/>
+          <MainNav @hide="hide"/>
         </div>
       </div>
     </div>
@@ -69,13 +69,15 @@
 import MainNav from "@/components/views/MainNav.vue";
 import InfoNav from "@/components/views/InfoNav.vue";
 import MainModule from "@/components/views/MainModule.vue";
+import ImageSwipe from "@/components/views/ImageSwipe.vue";
 
 export default {
   name: "MainPage",
-  components: {MainModule, InfoNav, MainNav},
+  components: {ImageSwipe, MainModule, InfoNav, MainNav},
 
   data(){
     return{
+      pageName: "MainPage"
     }
   },
 
@@ -87,7 +89,7 @@ export default {
   },
 
   mounted() {
-
+    this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
   },
 
   methods: {
@@ -97,6 +99,12 @@ export default {
     setCookies(key, value){
       return this.$cookies.set(key, value, 2147483647);
     },
+
+    hide(pageName){
+      if(this.pageName !== pageName){
+        this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
+      }
+    }
 
   },
 

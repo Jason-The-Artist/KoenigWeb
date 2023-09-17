@@ -6,6 +6,7 @@ import './assets/main.css'
 import './assets/colors.css'
 import './assets/nav.scss'
 import './assets/view.scss'
+import './assets/anim.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'

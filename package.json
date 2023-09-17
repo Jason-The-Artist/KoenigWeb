@@ -11,8 +11,10 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "vue": "^3.3.4",
     "vue-cookies": "^1.8.3",
+    "vue-gallery-slideshow": "^1.5.2",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
