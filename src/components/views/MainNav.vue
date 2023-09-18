@@ -92,6 +92,7 @@ export default {
   },
 
   created() {
+
   },
 
   mounted() {
@@ -123,21 +124,27 @@ export default {
     },
 
     emitHide(name){
+      this.turnOff()
       this.$emit("hide", name);
     },
 
     navIconClicked(){
-      console.log("clicked")
       if(this.$refs.navicon.className.includes("nav-cross-icon")){
-        this.$refs.navicon.className = this.$refs.navicon.className.replace("nav-cross-icon", "nav-menu-icon")
-        this.$refs.navbox.className = this.$refs.navbox.className.replace("on", "off")
+        this.turnOff()
       }else{
-        this.$refs.navicon.className = this.$refs.navicon.className.replace("nav-menu-icon", "nav-cross-icon")
-        if(this.$refs.navbox.className.includes("none")){
-          this.$refs.navbox.className = this.$refs.navbox.className.replace("none", "on")
-        }else{
-          this.$refs.navbox.className = this.$refs.navbox.className.replace("off", "on")
-        }
+        this.turnOn()
+      }
+    },
+    turnOff(){
+      this.$refs.navicon.className = this.$refs.navicon.className.replace("nav-cross-icon", "nav-menu-icon")
+      this.$refs.navbox.className = this.$refs.navbox.className.replace("on", "off")
+    },
+    turnOn(){
+      this.$refs.navicon.className = this.$refs.navicon.className.replace("nav-menu-icon", "nav-cross-icon")
+      if(this.$refs.navbox.className.includes("none")){
+        this.$refs.navbox.className = this.$refs.navbox.className.replace("none", "on")
+      }else{
+        this.$refs.navbox.className = this.$refs.navbox.className.replace("off", "on")
       }
     }
   }

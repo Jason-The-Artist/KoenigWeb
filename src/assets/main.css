@@ -108,6 +108,11 @@ a,
   border-radius: 30px;
 }
 
+.top-round-corner{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .fullheight{
   height: 100vh;
 }
@@ -153,6 +158,16 @@ a,
 
 .block-space{
   height: 750px
+}
+
+.footer-text{
+  font-size: 20px;
+}
+
+.footer-pos{
+  position: absolute;
+  bottom:0;
+  z-index:50000;
 }
 
 
@@ -203,6 +218,12 @@ a,
 
   html{
     width: 100vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer-text{
+    font-size: 3vw;
   }
 }
 

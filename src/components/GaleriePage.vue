@@ -1,7 +1,7 @@
 <template>
   <div ref="root" class="relative show-page">
     <div class="absolute center-horizontal fullwidth">
-      <div>
+      <div class="fullheight">
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
@@ -16,10 +16,11 @@
           </div>
         </div>
         <div style="height: 100px"></div>
+        <MainFooter @hide="hide"/>
       </div>
     </div>
-    <MainNav @hide="hide"/>
   </div>
+  <MainNav @hide="hide"/>
 </template>
 
 <script>
@@ -27,10 +28,11 @@
 import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
+import MainFooter from "@/components/views/MainFooter.vue";
 
 export default {
   name: "GaleriePage",
-  components: {MainModule, ImageSwipe, MainNav},
+  components: {MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{

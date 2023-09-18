@@ -147,10 +147,10 @@
 }
 
 .nav-box.off {
-  animation: hideBox 1s forwards;
+  animation: hideBox 0.5s forwards;
 }
 .nav-box.on {
-  animation: showBox 1s forwards;
+  animation: showBox 0.5s forwards;
 }
 
 

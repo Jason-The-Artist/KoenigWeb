@@ -51,17 +51,17 @@
             </div>
           </div>
           <div style="height: 100px"></div>
-        </div>
-      </div>
-      <div class="absolute center-horizontal">
-        <div class="fullwidth">
-          <div style="height: 70px"></div>
-          <MainNav @hide="hide"/>
+          <MainFooter @hide="hide"/>
         </div>
       </div>
     </div>
   </div>
 </div>
+  <div class="absolute center-horizontal">
+    <div class="fullwidth">
+      <MainNav @hide="hide"/>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -70,10 +70,11 @@ import MainNav from "@/components/views/MainNav.vue";
 import InfoNav from "@/components/views/InfoNav.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
+import MainFooter from "@/components/views/MainFooter.vue";
 
 export default {
   name: "MainPage",
-  components: {ImageSwipe, MainModule, InfoNav, MainNav},
+  components: {MainFooter, ImageSwipe, MainModule, InfoNav, MainNav},
 
   data(){
     return{
@@ -82,7 +83,7 @@ export default {
   },
 
   created() {
-
+    console.log("created")
   },
 
   beforeDestroy() {

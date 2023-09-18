@@ -30,10 +30,11 @@
           </div>
         </div>
         <div style="height: 100px"></div>
+        <MainFooter @hide="hide"/>
       </div>
     </div>
-    <MainNav @hide="hide"/>
   </div>
+  <MainNav @hide="hide"/>
 </template>
 
 <script>
@@ -41,10 +42,11 @@
 import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
+import MainFooter from "@/components/views/MainFooter.vue";
 
 export default {
   name: "LeistungenPage",
-  components: {MainModule, ImageSwipe, MainNav},
+  components: {MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{

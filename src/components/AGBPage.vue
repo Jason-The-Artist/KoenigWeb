@@ -5,12 +5,12 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">Kontakt</h2>
-            <p>Kontaktiert mich, weil ich brauche Arbeit</p>
+            <h2 class="logo-red bold" style="font-size: 40px">AGB</h2>
+            <p>Dies sind die allgemeinen Geschäftsbedingungen</p>
             <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
             <div style="height: 20px"></div>
-            <h2>Noch kann man mich nicht kontaktieren</h2>
+            <h2>Noch gibt es keine AGB</h2>
 
             <div style="height: 100px"></div>
           </div>
@@ -31,12 +31,12 @@ import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
 
 export default {
-  name: "KontaktPage",
+  name: "AGBPage",
   components: {MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{
-      pageName: "KontaktPage"
+      pageName: "AGBPage"
     }
   },
 
