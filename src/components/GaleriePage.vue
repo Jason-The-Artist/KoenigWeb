@@ -1,7 +1,10 @@
+
+
 <template>
+  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false"/>
   <div ref="root" class="relative show-page">
-    <div class="absolute center-horizontal fullwidth">
-      <div class="fullheight">
+    <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
+      <div>
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
@@ -11,6 +14,15 @@
             <div class="break-line orange-background"></div>
             <div style="height: 20px"></div>
             <h2>Noch sind keine Bilder vorhanden</h2>
+
+            <div class="main-grid center-horizontal">
+              <MainImageModule title="Haus" thumb="sample1.png" @click="imageClicked"/>
+              <MainImageModule title="Pool" thumb="sample2.png" @click="imageClicked"/>
+              <MainImageModule title="Zimmer" thumb="sample3.png" @click="imageClicked"/>
+              <MainImageModule title="kleines Haus" thumb="sample4.png" @click="imageClicked"/>
+              <MainImageModule title="Holzhaus" thumb="sample5.png" @click="imageClicked"/>
+              <MainImageModule title="Villa" thumb="sample6.png" @click="imageClicked"/>
+            </div>
 
             <div style="height: 100px"></div>
           </div>
@@ -29,14 +41,17 @@ import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
+import ImageGaleryPopup from "@/components/views/ImageGaleryPopup.vue";
+import MainImageModule from "@/components/views/MainImageModule.vue";
 
 export default {
   name: "GaleriePage",
-  components: {MainFooter, MainModule, ImageSwipe, MainNav},
+  components: {MainImageModule, ImageGaleryPopup, MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{
-      pageName: "GaleriePage"
+      pageName: "GaleriePage",
+      galeryShow: false
     }
   },
 
@@ -61,6 +76,10 @@ export default {
       if(this.pageName !== pageName){
         this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
+    },
+
+    imageClicked(){
+      this.galeryShow = true
     }
 
   },

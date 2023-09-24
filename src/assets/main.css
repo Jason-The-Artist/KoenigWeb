@@ -170,6 +170,19 @@ a,
   z-index:50000;
 }
 
+.image-galery{
+  width: 28vw;
+}
+
+.scroll {
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.image-module{
+  max-width: 95%
+}
+
 
 @media (hover: hover) {
   a:hover {
@@ -182,6 +195,9 @@ a,
 @media (max-width: 1550px) {
   .main-grid {
     grid-template-columns: repeat(2, 0fr);
+  }
+  .image-galery{
+    width: 43vw;
   }
 
 }
@@ -199,6 +215,9 @@ a,
 @media (max-width: 950px) {
   .main-grid {
     grid-template-columns: repeat(1, 0fr);
+  }
+  .image-galery{
+    width: 80vw;
   }
 }
 
