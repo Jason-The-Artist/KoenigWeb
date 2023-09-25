@@ -1,0 +1,154 @@
+{
+  "galery": [
+    {
+      "id": 0,
+      "thumb": "sample1.png",
+      "title": "Sample1",
+      "collection": [
+        {
+          "src": "sample1.png"
+        },
+        {
+          "src": "sample1.png"
+        },
+        {
+          "src": "sample2.png"
+        },
+        {
+          "src": "sample2.png"
+        },
+        {
+          "src": "sample3.png"
+        },
+        {
+          "src": "sample3.png"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "thumb": "sample2.png",
+      "title": "Sample2",
+      "collection": [
+        {
+          "src": "sample2.png"
+        },
+        {
+          "src": "sample2.png"
+        },
+        {
+          "src": "sample3.png"
+        },
+        {
+          "src": "sample3.png"
+        },
+        {
+          "src": "sample4.png"
+        },
+        {
+          "src": "sample4.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "thumb": "sample3.png",
+      "title": "Sample3",
+      "collection": [
+        {
+          "src": "sample3.png"
+        },
+        {
+          "src": "sample3.png"
+        },
+        {
+          "src": "sample4.png"
+        },
+        {
+          "src": "sample4.png"
+        },
+        {
+          "src": "sample5.png"
+        },
+        {
+          "src": "sample5.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "thumb": "sample4.png",
+      "title": "Sample4",
+      "collection": [
+        {
+          "src": "sample4.png"
+        },
+        {
+          "src": "sample4.png"
+        },
+        {
+          "src": "sample5.png"
+        },
+        {
+          "src": "sample5.png"
+        },
+        {
+          "src": "sample6.png"
+        },
+        {
+          "src": "sample6.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "thumb": "sample5.png",
+      "title": "Sample5",
+      "collection": [
+        {
+          "src": "sample5.png"
+        },
+        {
+          "src": "sample5.png"
+        },
+        {
+          "src": "sample6.png"
+        },
+        {
+          "src": "sample6.png"
+        },
+        {
+          "src": "sample1.png"
+        },
+        {
+          "src": "sample1.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "thumb": "sample6.png",
+      "title": "Sample6",
+      "collection": [
+        {
+          "src": "sample6.png"
+        },
+        {
+          "src": "sample6.png"
+        },
+        {
+          "src": "sample1.png"
+        },
+        {
+          "src": "sample1.png"
+        },
+        {
+          "src": "sample2.png"
+        },
+        {
+          "src": "sample2.png"
+        }
+      ]
+    }
+  ]
+}
