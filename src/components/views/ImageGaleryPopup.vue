@@ -17,12 +17,10 @@
                 <div style="height: 20px"></div>
 
                 <div ref="header" class="scroll popup-width center-horizontal main-grid">
-                  <img src="../../assets/sample1.png" class="image-galery"/>
-                  <img src="../../assets/sample2.png" class="image-galery"/>
-                  <img src="../../assets/sample3.png" class="image-galery"/>
-                  <img src="../../assets/sample4.png" class="image-galery"/>
-                  <img src="../../assets/sample5.png" class="image-galery"/>
-                  <img src="../../assets/sample6.png" class="image-galery"/>
+                  <img
+                      v-for="(dat) in parsed"
+                      :src="dat"
+                      class="image-galery"/>
                 </div>
               </div>
             </div>
@@ -42,10 +40,25 @@ export default {
 
   props: {
     show: Boolean,
+    data: Array,
   },
   data(){
     return{
       savedContent: [],
+      parsed: []
+    }
+  },
+
+  updated() {
+    this.parsed = []
+    for(let i = 0; i < this.data.length; i++){
+      let src = document.baseURI
+      if(src.includes("127.0.0.1")){
+        src = src.split("/#/")[0] + "/src/assets/" + this.data[i].src
+      }else{
+        src = src.split("/#/")[0] + "/images/" + this.data[i].src
+      }
+      this.parsed.push(src)
     }
   },
 

@@ -1,7 +1,7 @@
 
 
 <template>
-  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false"/>
+  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false" :data="galeryPopupData"/>
   <div ref="root" class="relative show-page">
     <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
       <div>
@@ -16,12 +16,12 @@
             <h2>Noch sind keine Bilder vorhanden</h2>
 
             <div class="main-grid center-horizontal">
-              <MainImageModule title="Haus" thumb="sample1.png" @click="imageClicked"/>
-              <MainImageModule title="Pool" thumb="sample2.png" @click="imageClicked"/>
-              <MainImageModule title="Zimmer" thumb="sample3.png" @click="imageClicked"/>
-              <MainImageModule title="kleines Haus" thumb="sample4.png" @click="imageClicked"/>
-              <MainImageModule title="Holzhaus" thumb="sample5.png" @click="imageClicked"/>
-              <MainImageModule title="Villa" thumb="sample6.png" @click="imageClicked"/>
+              <MainImageModule
+                  v-for="(dat) in galeryData"
+                  :title="dat.title"
+                  :thumb="dat.thumb"
+                  :id="dat.id"
+                  @clicked="imageClicked"/>
             </div>
 
             <div style="height: 100px"></div>
@@ -43,6 +43,7 @@ import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
 import ImageGaleryPopup from "@/components/views/ImageGaleryPopup.vue";
 import MainImageModule from "@/components/views/MainImageModule.vue";
+import json from "../assets/galery.json"
 
 export default {
   name: "GaleriePage",
@@ -51,7 +52,9 @@ export default {
   data(){
     return{
       pageName: "GaleriePage",
-      galeryShow: false
+      galeryShow: false,
+      galeryData: [],
+      galeryPopupData: [],
     }
   },
 
@@ -62,6 +65,17 @@ export default {
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    for(let i = 0; i < json.galery.length; i++){
+      let items = json.galery[i]
+      let dataset = {
+        id: items.id,
+        title: items.title,
+        thumb: items.thumb,
+        collection: items.collection
+      }
+      this.galeryData.push(dataset)
+    }
   },
 
   methods: {
@@ -78,8 +92,18 @@ export default {
       }
     },
 
-    imageClicked(){
+    imageClicked(id){
+      console.log(id)
+      let collection = []
+      for(let i = 0; i < json.galery.length; i++){
+        let index = json.galery[i].id
+        if(index === id){
+          collection = json.galery[i].collection
+          break;
+        }
+      }
       this.galeryShow = true
+      this.galeryPopupData = collection
     }
 
   },
