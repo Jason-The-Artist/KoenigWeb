@@ -10,7 +10,12 @@
             <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
             <div style="height: 20px"></div>
-            <h2>Noch kann man mich nicht kontaktieren</h2>
+
+            <h2>Tel: 0000000000</h2>
+
+            <button class="module-button pointer" @click="clicked" style="width: auto">
+              <h2>testemail@gmail.com</h2>
+            </button>
 
             <div style="height: 100px"></div>
           </div>
@@ -61,6 +66,10 @@ export default {
       if(this.pageName !== pageName){
         this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
+    },
+
+    clicked(){
+      window.open("mailto:mail.sender.je@gmail.com")
     }
 
   },

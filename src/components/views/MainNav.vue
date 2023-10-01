@@ -53,7 +53,6 @@
             </div>
           </div>
           <div class="center-horizontal relative" style="width: 100%">
-            <div class="nav-box absolute"></div>
             <div ref="navbox" class="none nav-box absolute white-background round-corner center-horizontal">
               <div>
                 <div class="center-horizontal">

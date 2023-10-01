@@ -11,7 +11,11 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.18.2",
     "keen-slider": "^6.8.6",
+    "nodemailer": "^6.9.5",
     "vue": "^3.3.4",
     "vue-cookies": "^1.8.3",
     "vue-gallery-slideshow": "^1.5.2",
