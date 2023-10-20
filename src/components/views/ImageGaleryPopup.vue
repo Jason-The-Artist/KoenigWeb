@@ -21,6 +21,7 @@
                       v-for="(dat) in parsed"
                       :src="dat"
                       class="image-galery"/>
+                  <div style="width: 100px; height: 100px"></div>
                 </div>
               </div>
             </div>
