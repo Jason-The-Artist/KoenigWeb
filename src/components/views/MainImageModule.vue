@@ -25,7 +25,7 @@ export default {
   },
 
   created() {
-    if(this.imgSrc.includes("127.0.0.1")){
+    if(this.imgSrc.includes("127.0.0.1") || this.imgSrc.includes("localhost")){
       this.imgSrc = this.imgSrc.split("/#/")[0] + "/src/assets/" + this.thumb
     }else{
       this.imgSrc = this.imgSrc.split("/#/")[0] + "/images/" + this.thumb

@@ -54,10 +54,10 @@ export default {
     this.parsed = []
     for(let i = 0; i < this.data.length; i++){
       let src = document.baseURI
-      if(src.includes("127.0.0.1")){
-        src = src.split("/#/")[0] + "/src/assets/" + this.data[i].src
+      if(src.includes("127.0.0.1") || src.includes("localhost")){
+        src = src.split("/#/")[0] + "/src/assets/" + this.data[i].img
       }else{
-        src = src.split("/#/")[0] + "/images/" + this.data[i].src
+        src = src.split("/#/")[0] + "/images/" + this.data[i].img
       }
       this.parsed.push(src)
     }

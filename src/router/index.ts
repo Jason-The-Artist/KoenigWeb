@@ -8,6 +8,7 @@ import KontaktPage from "@/components/KontaktPage.vue";
 import AGBPage from "@/components/AGBPage.vue";
 import DatenschutzPage from "@/components/DatenschutzPage.vue";
 import ImpressumPage from "@/components/ImpressumPage.vue";
+import ProjektPage from "@/components/ProjektPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/impressum',
     name: 'ImpressumPage',
     component: ImpressumPage
+  },
+  {
+    path: '/:id/:projekt',
+    name: 'ProjektPage',
+    component: ProjektPage
   },
   {
     path: '/:catchAll(.*)',
