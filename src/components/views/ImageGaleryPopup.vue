@@ -17,10 +17,17 @@
                 <div style="height: 20px"></div>
 
                 <div ref="header" class="scroll popup-width center-horizontal main-grid">
-                  <img
-                      v-for="(dat) in parsed"
-                      :src="dat"
-                      class="image-galery"/>
+                  <MainImageModule
+                      v-for="(dat) in data"
+                      :title="dat.title"
+                      :thumb="dat.img"
+                      :id="dat.id"
+                      :teaser="dat.teaser"
+                      :isPopup="false"
+                      :src="dat.src"
+                      @clicked="imageClicked"/>
+
+
                   <div style="width: 100px; height: 100px"></div>
                 </div>
               </div>
@@ -36,21 +43,51 @@
 
 <script>
 
+import MainImageModule from "@/components/views/MainImageModule.vue";
+import json from "../../assets/galery.json"
+
 export default {
   name: "ImageGaleryPopup",
+  components: {MainImageModule},
 
   props: {
     show: Boolean,
-    data: Array,
+    id: Number,
   },
   data(){
     return{
-      savedContent: [],
-      parsed: []
+      data: []
     }
   },
 
+  created() {
+
+  },
+
   updated() {
+    this.data = []
+    console.log("----------------------------------------------------------------")
+
+    for(let i = 0; i < json.galery.length; i++){
+      if(json.galery[i].id === this.id){
+        let category = json.galery[i]
+        for(let j = 0; j < category.collection.length; j++){
+          let item = category.collection[j]
+
+          let dat = {
+            title: item.title,
+            img: item.img,
+            id: "id" + this.id,
+            src: item.src,
+            teaser: item.teaser
+          }
+          this.data.push(dat)
+        }
+      }
+    }
+  },
+
+  /*updated() {
     this.parsed = []
     for(let i = 0; i < this.data.length; i++){
       let src = document.baseURI
@@ -59,18 +96,20 @@ export default {
       }else{
         src = src.split("/#/")[0] + "/images/" + this.data[i].img
       }
+      let dat = {
+        img: src,
+      }
       this.parsed.push(src)
     }
-  },
-
-
-  created() {
-
-  },
+  },*/
 
   methods: {
     onClose(){
       this.$emit("close")
+    },
+
+    imageClicked(){
+
     }
   },
 
