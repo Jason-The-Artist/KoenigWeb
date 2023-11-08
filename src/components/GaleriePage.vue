@@ -1,7 +1,7 @@
 
 
 <template>
-  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false" :data="galeryPopupData"/>
+  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false" :id="collectionId"/>
   <div ref="root" class="relative show-page">
     <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
       <div>
@@ -22,6 +22,7 @@
                   :title="dat.title"
                   :thumb="dat.thumb"
                   :id="dat.id"
+                  :isPopup="true"
                   @clicked="imageClicked"/>
             </div>
 
@@ -55,7 +56,7 @@ export default {
       pageName: "GaleriePage",
       galeryShow: false,
       galeryData: [],
-      galeryPopupData: [],
+      collectionId: 0
     }
   },
 
@@ -94,17 +95,8 @@ export default {
     },
 
     imageClicked(id){
-      console.log(id)
-      let collection = []
-      for(let i = 0; i < json.galery.length; i++){
-        let index = json.galery[i].id
-        if(index === id){
-          collection = json.galery[i].collection
-          break;
-        }
-      }
+      this.collectionId = id
       this.galeryShow = true
-      this.galeryPopupData = collection
     }
 
   },

@@ -7,6 +7,7 @@
           <div class="center-text full-width-percent">
             <h2 class="logo-red bold" style="font-size: 40px">{{title}}</h2>
 
+            <div v-html="content"></div>
 
             <div style="height: 100px"></div>
           </div>
@@ -26,6 +27,7 @@ import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
 import json from "../assets/galery.json"
+import content from "../assets/projects.json"
 
 export default {
   name: "ProjektPage",
@@ -36,13 +38,15 @@ export default {
       pageName: "ProjektPage",
       projekt: this.$route.params.projekt,
       collectionId: 0,
-      title: ""
+      title: "",
+      content: ""
     }
   },
 
   created() {
     this.collectionId = Number(this.$route.params.id.replace("id", ""))
     this.findTitle()
+    this.findContent()
   },
 
 
@@ -74,6 +78,14 @@ export default {
               break
             }
           }
+        }
+      }
+    },
+
+    findContent(){
+      for(let i = 0; i < content.projects.length; i++){
+        if(content.projects[i].src === this.projekt){
+          this.content = content.projects[i].vHtml
         }
       }
     },
