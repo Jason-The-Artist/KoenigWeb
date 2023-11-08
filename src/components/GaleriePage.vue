@@ -15,6 +15,7 @@
             <div style="height: 20px"></div>
             <h2>Noch sind keine Bilder vorhanden</h2>
 
+
             <div class="main-grid center-horizontal">
               <MainImageModule
                   v-for="(dat) in galeryData"

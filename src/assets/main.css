@@ -102,6 +102,7 @@ a,
 
 .round-corner{
   border-radius: 15px;
+  border: #95c221 solid 5px;
 }
 
 .more-round-corner{
