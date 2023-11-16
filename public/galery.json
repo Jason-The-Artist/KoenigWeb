@@ -1,0 +1,262 @@
+{
+  "galery": [
+    {
+      "id": 0,
+      "thumb": "sample1.png",
+      "title": "Sample1",
+      "collection": [
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        },
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        },
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        },
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        },
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        },
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "thumb": "sample2.png",
+      "title": "Sample2",
+      "collection": [
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        },
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        },
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        },
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        },
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        },
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "thumb": "sample3.png",
+      "title": "Sample3",
+      "collection": [
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        },
+        {
+          "img": "sample3.png",
+          "src": "sample3",
+          "title": "Großes Wohnzimmer",
+          "teaser": "Hier sieht mein ein großes Wohnzimmer in weiß gehalten. Dies hat eine moderne optik"
+        },
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        },
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        },
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        },
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "thumb": "sample4.png",
+      "title": "Sample4",
+      "collection": [
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        },
+        {
+          "img": "sample4.png",
+          "src": "sample4",
+          "title": "Kleines Gartenhaus",
+          "teaser": "Das Haus sieht echt klein aus, bietet aber Platz für eine Familie"
+        },
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        },
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        },
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        },
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "thumb": "sample5.png",
+      "title": "Sample5",
+      "collection": [
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        },
+        {
+          "img": "sample5.png",
+          "src": "sample5",
+          "title": "Holzhaus",
+          "teaser": "Das Holzhaus wird als Sauna benutzt. Also eher für Winter gedacht"
+        },
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        },
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        },
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        },
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "thumb": "sample6.png",
+      "title": "Sample6",
+      "collection": [
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        },
+        {
+          "img": "sample6.png",
+          "src": "sample6",
+          "title": "Villa",
+          "teaser": "Wenn du nicht Millionär bist, brauchst du gar nicht erst dieses Bild anklicken"
+        },
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        },
+        {
+          "img": "sample1.png",
+          "src": "sample1",
+          "title": "Schönes Haus",
+          "teaser": "Das ist ein schönes Haus welches nicht mir gehört"
+        },
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        },
+        {
+          "img": "sample2.png",
+          "src": "sample2",
+          "title": "Garten mit Pool",
+          "teaser": "Schöner Pool mit einer großen Gartenfläche. Hier kann man sich gut im Winter abkühlen"
+        }
+      ]
+    }
+  ]
+}

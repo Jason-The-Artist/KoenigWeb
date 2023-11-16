@@ -45,7 +45,6 @@ import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
 import ImageGaleryPopup from "@/components/views/ImageGaleryPopup.vue";
 import MainImageModule from "@/components/views/MainImageModule.vue";
-import json from "../assets/galery.json"
 
 export default {
   name: "GaleriePage",
@@ -56,7 +55,8 @@ export default {
       pageName: "GaleriePage",
       galeryShow: false,
       galeryData: [],
-      collectionId: 0
+      collectionId: 0,
+      json: {}
     }
   },
 
@@ -66,18 +66,27 @@ export default {
 
 
   mounted() {
-    this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
 
-    for(let i = 0; i < json.galery.length; i++){
-      let items = json.galery[i]
-      let dataset = {
-        id: items.id,
-        title: items.title,
-        thumb: items.thumb,
-        collection: items.collection
-      }
-      this.galeryData.push(dataset)
-    }
+    fetch('http://testing.handwerker-akoenig.de/galery.json')
+        .then(response => response.json())
+        .then(data => {
+          this.json = data
+          this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+          for(let i = 0; i < this.json.galery.length; i++){
+            let items = this.json.galery[i]
+            let dataset = {
+              id: items.id,
+              title: items.title,
+              thumb: items.thumb,
+              collection: items.collection
+            }
+            this.galeryData.push(dataset)
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching galery data:', error);
+        });
   },
 
   methods: {

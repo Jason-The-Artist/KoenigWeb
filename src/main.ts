@@ -1,4 +1,5 @@
 import VueCookies from 'vue-cookies'
+import galery from '../public/galery.json';
 
 
 
@@ -16,5 +17,7 @@ const app = createApp(App)
 
 app.use(router)
 app.use(VueCookies)
+
+app.config.globalProperties.$galery = galery;
 
 app.mount('#app')
