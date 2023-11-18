@@ -77,7 +77,7 @@ export default {
             let items = this.json.galery[i]
             let dataset = {
               id: items.id,
-              title: items.title,
+              title: this.convertU(items.title),
               thumb: items.thumb,
               collection: items.collection
             }
@@ -106,6 +106,13 @@ export default {
     imageClicked(id){
       this.collectionId = id
       this.galeryShow = true
+    },
+
+    convertU(text){
+      return text.replace(/\\u00F6/g, 'ö')
+          .replace(/\\u00E4/g, 'ä')
+          .replace(/\\u00FC/g, 'ü')
+          .replace(/\\u00DF/g, 'ß');
     }
 
   },
