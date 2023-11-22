@@ -5,9 +5,9 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">{{title}}</h2>
+            <h2 class="logo-red bold" style="font-size: 40px">{{convertU(title)}}</h2>
 
-            <div v-html="content"></div>
+            <div v-html="convertU(content)"></div>
 
             <div style="height: 100px"></div>
           </div>
@@ -26,8 +26,6 @@ import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
-import json from "../assets/galery.json"
-import content from "../assets/projects.json"
 
 export default {
   name: "ProjektPage",
@@ -39,19 +37,42 @@ export default {
       projekt: this.$route.params.projekt,
       collectionId: 0,
       title: "",
-      content: ""
+      content: "",
+      json: {},
+      projects: {}
     }
   },
 
   created() {
     this.collectionId = Number(this.$route.params.id.replace("id", ""))
-    this.findTitle()
-    this.findContent()
   },
 
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    fetch('http://testing.handwerker-akoenig.de/galery.json')
+        .then(response => response.json())
+        .then(data => {
+          this.json = data
+          this.findTitle()
+
+        })
+        .catch(error => {
+          console.error('Error fetching galery data:', error);
+        });
+
+    fetch('http://testing.handwerker-akoenig.de/projects.json')
+        .then(response => response.json())
+        .then(data => {
+          this.projects = data
+          this.findContent()
+
+        })
+        .catch(error => {
+          console.error('Error fetching projects data:', error);
+        });
+
   },
 
   methods: {
@@ -69,10 +90,10 @@ export default {
     },
 
     findTitle(){
-      for(let i = 0; i < json.galery.length; i++){
-        if(json.galery[i].id === this.collectionId){
-          for (let j = 0; j < json.galery[i].collection.length; j++){
-            let item = json.galery[i].collection[j]
+      for(let i = 0; i < this.json.galery.length; i++){
+        if(this.json.galery[i].id === this.collectionId){
+          for (let j = 0; j < this.json.galery[i].collection.length; j++){
+            let item = this.json.galery[i].collection[j]
             if(item.src === this.projekt){
               this.title = item.title
               break
@@ -83,12 +104,26 @@ export default {
     },
 
     findContent(){
-      for(let i = 0; i < content.projects.length; i++){
-        if(content.projects[i].src === this.projekt){
-          this.content = content.projects[i].vHtml
+      for(let i = 0; i < this.projects.projects.length; i++){
+        if(this.projects.projects[i].src === this.projekt){
+          this.content = this.projects.projects[i].vHtml
         }
       }
     },
+
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
+    }
 
   },
 

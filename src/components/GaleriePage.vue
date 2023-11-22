@@ -109,10 +109,17 @@ export default {
     },
 
     convertU(text){
-      return text.replace(/\\u00F6/g, 'ö')
-          .replace(/\\u00E4/g, 'ä')
-          .replace(/\\u00FC/g, 'ü')
-          .replace(/\\u00DF/g, 'ß');
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
     }
 
   },
