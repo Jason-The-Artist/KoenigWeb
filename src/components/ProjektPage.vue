@@ -1,7 +1,11 @@
+
+
+
 <template>
+  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false" :id="collectionId"/>
   <div ref="root" class="relative show-page">
-    <div class="absolute center-horizontal fullwidth">
-      <div class="fullheight">
+    <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
+      <div>
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
@@ -26,10 +30,12 @@ import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
+import ImageGaleryPopup from "@/components/views/ImageGaleryPopup.vue";
+import MainImageModule from "@/components/views/MainImageModule.vue";
 
 export default {
   name: "ProjektPage",
-  components: {MainFooter, MainModule, ImageSwipe, MainNav},
+  components: {MainImageModule, ImageGaleryPopup, MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{

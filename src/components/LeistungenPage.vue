@@ -7,9 +7,7 @@
           <div class="center-text full-width-percent">
             <h2 class="logo-red bold" style="font-size: 40px">Leistungen</h2>
             <p>Leistungen die ihre Seele erfüllen</p>
-            <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
-            <div style="height: 20px"></div>
             <div class="main-grid center-horizontal">
               <MainModule title="Web-Development" content="Webseiten mit der Vue.js Architektur! Ich kann mit Vue.js schöne und intuitive Webseiten entwickeln."/>
               <MainModule title="App-Development" content="Android Apps können nützlich und unterhaltsam sein. Ich kann ihnen

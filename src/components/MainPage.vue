@@ -12,9 +12,7 @@
             <div class="center-text full-width-percent">
               <h2 class="logo-red bold" style="font-size: 40px">Jason Enns- Ihr Softwareentwickler</h2>
               <p>Softwareentwicklung mit Herz und Verstand. Webseite, Apps, Frontend, Backend, alles ist dabei!</p>
-              <div style="height: 20px"></div>
               <div class="break-line orange-background"></div>
-              <div style="height: 20px"></div>
               <p>Sotwareentwicklung is ein langer und aufwendiger Prozess. Es benötigt talentierte und creative Menschen
                 die programmieren beherschen, damit man ein gutes Ergebnis hat. Zum Glück gibt es Jason Enns der sehr talentiert
                 ist und ihnen ein Meisterwerk programmieren kann. Mein Ziel wird es sein einmal selbständig zu sein und
@@ -27,9 +25,7 @@
                 durch meinen guten Ruf zu leben. Bis dahin dauert es aber noch, weil ich erst richtige Berufserfahrung sammeln muss.
                 Um aber Berufserfahrung zu sammeln, muss man erstmal studieren. Ich fange mitte Oktober an zu studieren. Also bis
                 zur Selbsständigkeit ist es noch ein langer Weg.</p>
-              <div style="height: 20px"></div>
               <div class="break-line orange-background"></div>
-              <div style="height: 20px"></div>
               <h1 class="logo-red">Meine Leistungen</h1>
               <div class="main-grid center-horizontal">
                 <MainModule title="Web-Development" content="Webseiten mit der Vue.js Architektur! Ich kann mit Vue.js schöne und intuitive Webseiten entwickeln."/>

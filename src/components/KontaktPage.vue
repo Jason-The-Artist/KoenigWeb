@@ -7,9 +7,7 @@
           <div class="center-text full-width-percent">
             <h2 class="logo-red bold" style="font-size: 40px">Kontakt</h2>
             <p>Kontaktiert mich, weil ich brauche Arbeit</p>
-            <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
-            <div style="height: 20px"></div>
 
             <h2>Tel: 0000000000</h2>
 

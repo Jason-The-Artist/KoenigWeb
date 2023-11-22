@@ -44,7 +44,6 @@
 <script>
 
 import MainImageModule from "@/components/views/MainImageModule.vue";
-import json from "../../assets/galery.json"
 
 export default {
   name: "ImageGaleryPopup",
@@ -56,30 +55,42 @@ export default {
   },
   data(){
     return{
-      data: []
+      data: [],
+      json: {}
     }
   },
 
   created() {
 
   },
+  
+  mounted(){
+    fetch('http://testing.handwerker-akoenig.de/galery.json')
+        .then(response => response.json())
+        .then(data => {
+          this.json = data
+        })
+        .catch(error => {
+          console.error('Error fetching galery data:', error);
+        });
+  },
 
   updated() {
     this.data = []
     console.log("----------------------------------------------------------------")
 
-    for(let i = 0; i < json.galery.length; i++){
-      if(json.galery[i].id === this.id){
-        let category = json.galery[i]
+    for(let i = 0; i < this.json.galery.length; i++){
+      if(this.json.galery[i].id === this.id){
+        let category = this.json.galery[i]
         for(let j = 0; j < category.collection.length; j++){
           let item = category.collection[j]
 
           let dat = {
-            title: item.title,
+            title: this.convertU(item.title),
             img: item.img,
             id: "id" + this.id,
             src: item.src,
-            teaser: item.teaser
+            teaser: this.convertU(item.teaser)
           }
           this.data.push(dat)
         }
@@ -110,6 +121,19 @@ export default {
 
     imageClicked(){
 
+    },
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
     }
   },
 

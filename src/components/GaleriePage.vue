@@ -10,9 +10,7 @@
           <div class="center-text full-width-percent">
             <h2 class="logo-red bold" style="font-size: 40px">Galerie</h2>
             <p>Bilder die zeigen wie gut ich bin</p>
-            <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
-            <div style="height: 20px"></div>
             <h2>Noch sind keine Bilder vorhanden</h2>
 
 

@@ -7,9 +7,7 @@
           <div class="center-text full-width-percent">
             <h2 class="logo-red bold" style="font-size: 40px">Impressum</h2>
             <p>Hier steht alles drinne was im Impressum stehen muss</p>
-            <div style="height: 20px"></div>
             <div class="break-line orange-background"></div>
-            <div style="height: 20px"></div>
             <h2>Aber hier steht noch nichts</h2>
 
             <div style="height: 100px"></div>
