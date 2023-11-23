@@ -16,7 +16,7 @@
 
                 <div style="height: 20px"></div>
 
-                <div ref="header" class="scroll popup-width center-horizontal main-grid">
+                <div ref="header" class="scroll-y popup-width center-horizontal main-grid" style="height: 80vh">
                   <MainImageModule
                       v-for="(dat) in data"
                       :title="dat.title"

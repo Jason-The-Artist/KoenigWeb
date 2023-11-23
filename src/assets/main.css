@@ -182,6 +182,11 @@ a,
   overflow: scroll;
 }
 
+.scroll-y {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
 .image-module{
   max-width: 95%
 }
