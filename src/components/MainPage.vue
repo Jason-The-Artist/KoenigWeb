@@ -44,15 +44,20 @@
 
 
               <div style="height: 100px"></div>
+
             </div>
           </div>
           <div style="height: 100px"></div>
-          <MainFooter @hide="hide"/>
+          <div class="absolute" style="bottom: 0;">
+            <MainFooter @hide="hide"/>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
   <div class="absolute center-horizontal">
     <div class="fullwidth">
       <MainNav @hide="hide"/>

@@ -1,8 +1,9 @@
 <template>
   <div ref="container" class="keen-slider">
-    <div class="keen-slider__slide number-slide1"><img src="../../assets/sample1.png" class="main-image overflow-hidden"></div>
-    <div class="keen-slider__slide number-slide2"><img src="../../assets/sample2.png" class="main-image overflow-hidden"></div>
-    <div class="keen-slider__slide number-slide3"><img src="../../assets/sample3.png" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="root + 'slider1.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="root + 'slider2.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="root + 'slider3.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="root + 'slider4.jpg'" class="main-image overflow-hidden"></div>
   </div>
 </template>
 
@@ -60,6 +61,8 @@ export default {
 
   data(){
     return{
+      root: "../../src/assets/slider/",
+      rootP: "images/slider/"
     }
   },
 
