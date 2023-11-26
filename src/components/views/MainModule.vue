@@ -5,7 +5,7 @@
     <div class="content-module">
       <p class="content-text-size">{{content}}</p>
     </div>
-    <button class="module-button pointer">
+    <button class="module-button pointer" @click="clicked">
       <h2>Ein Button</h2>
     </button>
   </div>
@@ -14,12 +14,15 @@
 
 <script>
 
+import router from "@/router";
+
 export default {
   name: "MainModule",
 
   props: {
     title: String,
     content: String,
+    src: String
   },
 
   data(){
@@ -35,7 +38,10 @@ export default {
   },
 
   methods: {
-
+    clicked(){
+      this.$emit("hide");
+      setTimeout(() => router.push("/leistung/" + this.src), 500)
+    }
   }
 
 }

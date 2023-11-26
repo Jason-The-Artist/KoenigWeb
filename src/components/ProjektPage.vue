@@ -2,7 +2,6 @@
 
 
 <template>
-  <ImageGaleryPopup :show="galeryShow" @close="galeryShow = false" :id="collectionId"/>
   <div ref="root" class="relative show-page">
     <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
       <div>

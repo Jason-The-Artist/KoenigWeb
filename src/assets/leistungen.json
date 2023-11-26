@@ -1,0 +1,16 @@
+{
+  "leistungen": [
+    {
+      "src": "src1",
+      "title": "Programmieren",
+      "teaser": "Webseiten mit der Vue.js Architektur! Ich kann mit Vue.js schöne und intuitive Webseiten entwickeln.",
+      "vHtml": "Hier sollte vhtml rein"
+    },
+    {
+      "src": "src2",
+      "title": "BackEnd",
+      "teaser": "Ein BackEnd ist oft notwendig um komplexe Prozesse und Inhalte bereitzustellen. Mit einem BackEnd können Anwendungen miteinander kommunizieren. Ich kann ihnen ein passendes Backend für ihre Projekte entwickeln.",
+      "vHtml": "hier sollte vhtml rein"
+    }
+  ]
+}

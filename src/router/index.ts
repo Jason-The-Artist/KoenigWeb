@@ -9,6 +9,7 @@ import AGBPage from "@/components/AGBPage.vue";
 import DatenschutzPage from "@/components/DatenschutzPage.vue";
 import ImpressumPage from "@/components/ImpressumPage.vue";
 import ProjektPage from "@/components/ProjektPage.vue";
+import LeistungContentPage from "@/components/LeistungContentPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -50,6 +51,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:id/:projekt',
     name: 'ProjektPage',
     component: ProjektPage
+  },
+  {
+    path: '/leistung/:leistung',
+    name: 'LeistungContentPage',
+    component: LeistungContentPage
   },
   {
     path: '/:catchAll(.*)',

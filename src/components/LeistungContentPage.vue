@@ -1,4 +1,6 @@
 
+
+
 <template>
   <div ref="root" class="relative show-page">
     <div class="absolute center-horizontal fullwidth" style="min-height: 100vh">
@@ -6,18 +8,9 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
+            <h2 class="logo-red bold" style="font-size: 40px">{{convertU(title)}}</h2>
+
             <div v-html="convertU(content)"></div>
-            <div class="main-grid center-horizontal">
-              <MainModule
-                  v-for="(dat) in modules"
-                  :title="dat.title"
-                  :content="dat.teaser"
-                  :src="dat.src"
-                  @hide="doHide"
-              />
-
-            </div>
-
 
             <div style="height: 100px"></div>
           </div>
@@ -36,55 +29,43 @@ import MainNav from "@/components/views/MainNav.vue";
 import ImageSwipe from "@/components/views/ImageSwipe.vue";
 import MainModule from "@/components/views/MainModule.vue";
 import MainFooter from "@/components/views/MainFooter.vue";
+import ImageGaleryPopup from "@/components/views/ImageGaleryPopup.vue";
+import MainImageModule from "@/components/views/MainImageModule.vue";
 import json from "../assets/leistungen.json"
 
 export default {
-  name: "LeistungenPage",
-  components: {MainFooter, MainModule, ImageSwipe, MainNav},
+  name: "LeistungContentPage",
+  components: {MainImageModule, ImageGaleryPopup, MainFooter, MainModule, ImageSwipe, MainNav},
 
   data(){
     return{
-      pageName: "LeistungenPage",
+      pageName: "LeistungContentPage",
+      leistung: this.$route.params.leistung,
+      title: "",
       content: "",
-      modules: []
+      json: {}
     }
   },
 
   created() {
-
   },
 
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
 
-    fetch('http://testing.handwerker-akoenig.de/pages.json')
-        .then(response => response.json())
-        .then(data => {
-          this.content = data.seiten.leistungen
-
-        })
-        .catch(error => {
-          console.error('Error fetching pages data:', error);
-        });
-
     fetch('http://testing.handwerker-akoenig.de/leistungen.json')
         .then(response => response.json())
         .then(data => {
-          let arr = data.leistungen
-          for(let i = 0; i < arr.length; i++){
-            let dat = {
-              title: arr[i].title,
-              teaser: arr[i].teaser,
-              src: arr[i].src
-            }
-            this.modules.push(dat)
-          }
+          this.json = data
+          this.findTitle()
+          this.findContent()
 
         })
         .catch(error => {
           console.error('Error fetching leistungen data:', error);
         });
+
   },
 
   methods: {
@@ -97,12 +78,24 @@ export default {
 
     hide(pageName){
       if(this.pageName !== pageName){
-        this.doHide()
+        this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
     },
 
-    doHide(){
-      this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
+    findTitle(){
+      for(let i = 0; i < this.json.leistungen.length; i++){
+        if(this.json.leistungen[i].src === this.leistung){
+          this.title = this.json.leistungen[i].title
+        }
+      }
+    },
+
+    findContent(){
+      for(let i = 0; i < this.json.leistungen.length; i++){
+        if(this.json.leistungen[i].src === this.leistung){
+          this.content = this.json.leistungen[i].vHtml
+        }
+      }
     },
 
     convertU(text){
@@ -118,7 +111,6 @@ export default {
           .replace(/!!A/g, 'Ä')
           .replace(/!!U/g, 'Ü')
     },
-
 
   },
 
