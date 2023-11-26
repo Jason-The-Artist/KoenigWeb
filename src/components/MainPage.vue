@@ -10,37 +10,7 @@
           <div class="block-space"></div>
           <div class="white-background main-text-box more-round-corner center-horizontal" style="margin-top: -50px">
             <div class="center-text full-width-percent">
-              <h2 class="logo-red bold" style="font-size: 40px">Jason Enns- Ihr Softwareentwickler</h2>
-              <p>Softwareentwicklung mit Herz und Verstand. Webseite, Apps, Frontend, Backend, alles ist dabei!</p>
-              <div class="break-line orange-background"></div>
-              <p>Sotwareentwicklung is ein langer und aufwendiger Prozess. Es benötigt talentierte und creative Menschen
-                die programmieren beherschen, damit man ein gutes Ergebnis hat. Zum Glück gibt es Jason Enns der sehr talentiert
-                ist und ihnen ein Meisterwerk programmieren kann. Mein Ziel wird es sein einmal selbständig zu sein und
-                durch meinen guten Ruf zu leben. Bis dahin dauert es aber noch, weil ich erst richtige Berufserfahrung sammeln muss.
-                Um aber Berufserfahrung zu sammeln, muss man erstmal studieren. Ich fange mitte Oktober an zu studieren. Also bis
-                zur Selbsständigkeit ist es noch ein langer Weg. Und weil dieser Text so schön geschrieben ist, kopiere ich ihn nochmal!
-                Sotwareentwicklung is ein langer und aufwendiger Prozess. Es benötigt talentierte und creative Menschen
-                die programmieren beherschen, damit man ein gutes Ergebnis hat. Zum Glück gibt es Jason Enns der sehr talentiert
-                ist und ihnen ein Meisterwerk programmieren kann. Mein Ziel wird es sein einmal selbständig zu sein und
-                durch meinen guten Ruf zu leben. Bis dahin dauert es aber noch, weil ich erst richtige Berufserfahrung sammeln muss.
-                Um aber Berufserfahrung zu sammeln, muss man erstmal studieren. Ich fange mitte Oktober an zu studieren. Also bis
-                zur Selbsständigkeit ist es noch ein langer Weg.</p>
-              <div class="break-line orange-background"></div>
-              <h1 class="logo-red">Meine Leistungen</h1>
-              <div class="main-grid center-horizontal">
-                <MainModule title="Web-Development" content="Webseiten mit der Vue.js Architektur! Ich kann mit Vue.js schöne und intuitive Webseiten entwickeln."/>
-                <MainModule title="App-Development" content="Android Apps können nützlich und unterhaltsam sein. Ich kann ihnen
-                dabei helfen ihre eigene Android App zu besitzen und ihre Träume zu verwirklichen"/>
-                <MainModule title="BackEnd" content="Ein BackEnd ist oft notwendig um komplexe Prozesse und Inhalte bereitzustellen.
-                Mit einem BackEnd können Anwendungen miteinander kommunizieren. Ich kann ihnen ein passendes Backend für ihre Projekte entwickeln."/>
-                <MainModule title="Java Anwendung" content="Java ist eine allrounder Sprache. Java ist auch sehr gut um Anwendungen zu entwickeln.
-                Diese Anwendungen sind automatisch in der Lage auf MacOs, Linux und Windows zu laufen."/>
-                <MainModule title="AI-Development" content="Ich habe mich nur 5 Minuten lang mit AI-Development beschäftig. Ich habe das nur für ein Platzhalter geschrieben. Als ich kann hier nichts für sie tun."/>
-                <MainModule title="Game-Development" content="Auch das dient eher für ein Platzhalter. Dennoch habe ich mich vor
-                langer Zeit mit Game-Development beschäftigt und habe ein kleines Spiel mal in Unity3D entwickelt"/>
-              </div>
-
-
+              <div v-html="convertU(content)"></div>
 
 
               <div style="height: 100px"></div>
@@ -79,7 +49,9 @@ export default {
 
   data(){
     return{
-      pageName: "MainPage"
+      pageName: "MainPage",
+      json: {},
+      content: ""
     }
   },
 
@@ -92,6 +64,17 @@ export default {
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    fetch('http://testing.handwerker-akoenig.de/pages.json')
+        .then(response => response.json())
+        .then(data => {
+          this.json = data
+          this.content = this.json.seiten.main
+
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
+        });
   },
 
   methods: {
@@ -106,7 +89,20 @@ export default {
       if(this.pageName !== pageName){
         this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
-    }
+    },
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
+    },
 
   },
 

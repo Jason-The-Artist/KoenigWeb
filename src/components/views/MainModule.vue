@@ -35,17 +35,7 @@ export default {
   },
 
   methods: {
-    click1(){
 
-    },
-
-    click2(){
-
-    },
-
-    click3(){
-
-    },
   }
 
 }

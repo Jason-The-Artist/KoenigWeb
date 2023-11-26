@@ -1,9 +1,13 @@
 <template>
 <div class="top-round-corner white-background main-text-box footer-pos">
-  <div class="center-horizontal">
-    <h2 class="center-horizontal black pointer footer-text" @click="click1">AGB</h2>
+  <div class="full-center">
+    <div>
+      <a class="a-not-bg pointer" href="https://www.google.com"><img class="footer-icon" src="../../assets/instagram.png"/></a>
+    </div>
     <div class="nav-space"></div>
-    <h2 class="center-horizontal black pointer footer-text" @click="click2">Datenschutzerklärung</h2>
+    <div>
+      <a class="a-not-bg pointer" href="https://www.google.com"><img class="footer-icon" src="../../assets/youtube.png"/></a>
+    </div>
     <div class="nav-space"></div>
     <h2 class="center-horizontal black pointer footer-text" @click="click3">Impressum</h2>
   </div>

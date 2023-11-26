@@ -1,9 +1,9 @@
 <template>
   <div ref="container" class="keen-slider">
-    <div class="keen-slider__slide"><img :src="root + 'slider1.jpg'" class="main-image overflow-hidden"></div>
-    <div class="keen-slider__slide"><img :src="root + 'slider2.jpg'" class="main-image overflow-hidden"></div>
-    <div class="keen-slider__slide"><img :src="root + 'slider3.jpg'" class="main-image overflow-hidden"></div>
-    <div class="keen-slider__slide"><img :src="root + 'slider4.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="rootP + 'slider1.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="rootP + 'slider2.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="rootP + 'slider3.jpg'" class="main-image overflow-hidden"></div>
+    <div class="keen-slider__slide"><img :src="rootP + 'slider4.jpg'" class="main-image overflow-hidden"></div>
   </div>
 </template>
 

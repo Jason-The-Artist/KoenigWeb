@@ -5,15 +5,7 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">Kontakt</h2>
-            <p>Kontaktiert mich, weil ich brauche Arbeit</p>
-            <div class="break-line orange-background"></div>
-
-            <h2>Tel: 0000000000</h2>
-
-            <button class="module-button pointer" @click="clicked" style="width: auto">
-              <h2>testemail@gmail.com</h2>
-            </button>
+            <div v-html="convertU(content)"></div>
 
             <div style="height: 100px"></div>
           </div>
@@ -39,7 +31,8 @@ export default {
 
   data(){
     return{
-      pageName: "KontaktPage"
+      pageName: "KontaktPage",
+      content: ""
     }
   },
 
@@ -50,6 +43,16 @@ export default {
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    fetch('http://testing.handwerker-akoenig.de/pages.json')
+        .then(response => response.json())
+        .then(data => {
+          this.content = data.seiten.kontakt
+
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
+        });
   },
 
   methods: {
@@ -66,9 +69,20 @@ export default {
       }
     },
 
-    clicked(){
-      window.open("mailto:mail.sender.je@gmail.com")
-    }
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
+    },
+
 
   },
 

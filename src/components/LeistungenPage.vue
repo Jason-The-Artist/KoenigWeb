@@ -5,9 +5,7 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">Leistungen</h2>
-            <p>Leistungen die ihre Seele erfüllen</p>
-            <div class="break-line orange-background"></div>
+            <div v-html="convertU(content)"></div>
             <div class="main-grid center-horizontal">
               <MainModule title="Web-Development" content="Webseiten mit der Vue.js Architektur! Ich kann mit Vue.js schöne und intuitive Webseiten entwickeln."/>
               <MainModule title="App-Development" content="Android Apps können nützlich und unterhaltsam sein. Ich kann ihnen
@@ -48,7 +46,8 @@ export default {
 
   data(){
     return{
-      pageName: "LeistungenPage"
+      pageName: "LeistungenPage",
+      content: ""
     }
   },
 
@@ -59,6 +58,16 @@ export default {
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    fetch('http://testing.handwerker-akoenig.de/pages.json')
+        .then(response => response.json())
+        .then(data => {
+          this.content = data.seiten.leistungen
+
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
+        });
   },
 
   methods: {
@@ -73,7 +82,22 @@ export default {
       if(this.pageName !== pageName){
         this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
-    }
+    },
+
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
+    },
+
 
   },
 

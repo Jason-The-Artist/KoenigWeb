@@ -8,11 +8,8 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">Galerie</h2>
-            <p>Bilder die zeigen wie gut ich bin</p>
-            <div class="break-line orange-background"></div>
-            <h2>Noch sind keine Bilder vorhanden</h2>
 
+            <div v-html="convertU(content)"></div>
 
             <div class="main-grid center-horizontal">
               <MainImageModule
@@ -55,7 +52,8 @@ export default {
       galeryShow: false,
       galeryData: [],
       collectionId: 0,
-      json: {}
+      json: {},
+      content: ""
     }
   },
 
@@ -85,6 +83,17 @@ export default {
         })
         .catch(error => {
           console.error('Error fetching galery data:', error);
+        });
+
+
+    fetch('http://testing.handwerker-akoenig.de/pages.json')
+        .then(response => response.json())
+        .then(data => {
+          this.content = data.seiten.galerie
+
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
         });
   },
 
@@ -119,7 +128,7 @@ export default {
           .replace(/!!O/g, 'Ö')
           .replace(/!!A/g, 'Ä')
           .replace(/!!U/g, 'Ü')
-    }
+    },
 
   },
 

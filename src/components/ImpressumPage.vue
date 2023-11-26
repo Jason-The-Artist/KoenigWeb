@@ -5,10 +5,8 @@
         <div style="height: 150px"></div>
         <div class="white-background main-text-box more-round-corner center-horizontal">
           <div class="center-text full-width-percent">
-            <h2 class="logo-red bold" style="font-size: 40px">Impressum</h2>
-            <p>Hier steht alles drinne was im Impressum stehen muss</p>
-            <div class="break-line orange-background"></div>
-            <h2>Aber hier steht noch nichts</h2>
+
+            <div v-html="convertU(content)"></div>
 
             <div style="height: 100px"></div>
           </div>
@@ -34,7 +32,8 @@ export default {
 
   data(){
     return{
-      pageName: "ImpressumPage"
+      pageName: "ImpressumPage",
+      content: ""
     }
   },
 
@@ -45,6 +44,16 @@ export default {
 
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
+
+    fetch('http://testing.handwerker-akoenig.de/pages.json')
+        .then(response => response.json())
+        .then(data => {
+          this.content = data.seiten.impressum
+
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
+        });
   },
 
   methods: {
@@ -59,7 +68,22 @@ export default {
       if(this.pageName !== pageName){
         this.$refs.root.className = this.$refs.root.className.replace("show-page", "hide-page")
       }
-    }
+    },
+
+    convertU(text){
+      return text.replace(/!u00F6/g, 'ö')
+          .replace(/!u00E4/g, 'ä')
+          .replace(/!u00FC/g, 'ü')
+          .replace(/!u00DF/g, 'ß')
+          .replace(/!!o/g, 'ö')
+          .replace(/!!a/g, 'ä')
+          .replace(/!!u/g, 'ü')
+          .replace(/!!s/g, 'ß')
+          .replace(/!!O/g, 'Ö')
+          .replace(/!!A/g, 'Ä')
+          .replace(/!!U/g, 'Ü')
+    },
+
 
   },
 

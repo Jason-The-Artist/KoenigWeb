@@ -129,7 +129,7 @@ export default {
           .replace(/!!O/g, 'Ö')
           .replace(/!!A/g, 'Ä')
           .replace(/!!U/g, 'Ü')
-    }
+    },
 
   },
 
