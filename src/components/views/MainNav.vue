@@ -33,18 +33,18 @@
               <img src="../../assets/logo_transparent.png" class="nav-logo pointer" @click="mainClick">
             </div>
             <div class="full-center white-background nav-height nav-middle-width" style="">
-              <h2 class="nav-module center-horizontal logo-green" @click="mainClick">Startseite</h2>
+              <h2 class="nav-module center-horizontal logo-green" @click="mainClick">{{main}}</h2>
               <div class="nav-space"></div>
-              <h2 class="nav-module center-horizontal logo-green" @click="click1">Leistungen</h2>
+              <h2 class="nav-module center-horizontal logo-green" @click="click1">{{leistungen}}</h2>
               <div class="nav-space"></div>
-              <h2 class="nav-module center-horizontal logo-green" @click="click2">Galerie</h2>
+              <h2 class="nav-module center-horizontal logo-green" @click="click2">{{galerie}}</h2>
               <div class="nav-space"></div>
-              <h2 class="nav-module center-horizontal logo-green" @click="click3">Kontakt</h2>
+              <h2 class="nav-module center-horizontal logo-green" @click="click3">{{kontakt}}</h2>
             </div>
             <div class="nav-element center-horizontal nav-round-corner nav-info-element nav-info-width">
               <div>
-                <h2 class="logo-grey nav-info-text">Tel: 0000-00000</h2>
-                <h2 class="logo-grey nav-info-text">Email: test.email@gmail.com</h2>
+                <h2 class="logo-grey nav-info-text">{{tel}}</h2>
+                <h2 class="logo-grey nav-info-text">{{email}}</h2>
               </div>
             </div>
             <div class="white-background nav-height nav-right-space-width right">
@@ -56,18 +56,18 @@
             <div ref="navbox" class="none nav-box absolute white-background round-corner center-horizontal">
               <div>
                 <div class="center-horizontal">
-                  <h3 class="decent-color">Tel: 0000-00000</h3>
+                  <h3 class="decent-color">{{tel}}</h3>
                 </div>
                 <div class="center-horizontal">
-                  <h3 class="decent-color">Email: test.email@gmail.com</h3>
+                  <h3 class="decent-color">{{email}}</h3>
                 </div>
-                <h2 class="nav-box-module center-horizontal logo-green" @click="mainClick">Startseite</h2>
+                <h2 class="nav-box-module center-horizontal logo-green" @click="mainClick">{{main}}</h2>
                 <div class="nav-space"></div>
-                <h2 class="nav-box-module center-horizontal logo-green" @click="click1">Leistungen</h2>
+                <h2 class="nav-box-module center-horizontal logo-green" @click="click1">{{leistungen}}</h2>
                 <div class="nav-space"></div>
-                <h2 class="nav-box-module center-horizontal logo-green" @click="click2">Galerie</h2>
+                <h2 class="nav-box-module center-horizontal logo-green" @click="click2">{{galerie}}</h2>
                 <div class="nav-space"></div>
-                <h2 class="nav-box-module center-horizontal logo-green" @click="click3">Kontakt</h2>
+                <h2 class="nav-box-module center-horizontal logo-green" @click="click3">{{kontakt}}</h2>
               </div>
             </div>
           </div>
@@ -81,17 +81,25 @@
 <script>
 
 import router from "@/router";
+import js from "../../assets/menu.json"
 
 export default {
   name: "MainNav",
 
   data(){
     return{
+      json: {},
+      main: "",
+      leistungen: "",
+      galerie: "",
+      kontakt: "",
+      tel: "",
+      email: "",
     }
   },
 
   created() {
-
+    //this.json = js
   },
 
   mounted() {
@@ -99,6 +107,23 @@ export default {
     box.addEventListener('animationend', function() {
       box.className = box.className.replace("off", "none")
     });
+
+    fetch('http://testing.handwerker-akoenig.de/menu.json')
+        .then(response => response.json())
+        .then(data => {
+          this.json = data
+          let base = this.json.menuTop.navText
+          this.main = base.main
+          this.leistungen = base.leistungen
+          this.galerie = base.galerie
+          this.kontakt = base.kontakt
+          this.tel = this.json.menuTop.shortInfo.tel
+          this.email = this.json.menuTop.shortInfo.email
+        })
+        .catch(error => {
+          console.error('Error fetching pages data:', error);
+        });
+
   },
 
   methods: {
