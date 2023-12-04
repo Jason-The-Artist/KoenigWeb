@@ -6,7 +6,7 @@
       <p class="content-text-size">{{content}}</p>
     </div>
     <button class="module-button pointer" @click="clicked">
-      <h2>Ein Button</h2>
+      <h2>Weitere Infos</h2>
     </button>
   </div>
 </div>

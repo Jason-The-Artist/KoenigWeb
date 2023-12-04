@@ -2,7 +2,9 @@
 <div class="center-horizontal">
   <div class="main-box decent-red-background" style="height: auto">
     <h1 class="logo-green">{{title}}</h1>
-    <img :src="imgSrc" class="image-module">
+    <div class="center-horizontal">
+      <img :src="imgSrc" class="image-module">
+    </div>
     <p>{{teaser}}</p>
     <div class="center-horizontal">
       <button class="module-button pointer" @click="clicked">

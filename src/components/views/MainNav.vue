@@ -108,7 +108,8 @@ export default {
       box.className = box.className.replace("off", "none")
     });
 
-    fetch('http://testing.handwerker-akoenig.de/menu.json')
+    //fetch('http://testing.handwerker-akoenig.de/menu.json')
+    fetch('https://handwerker-akoenig.de/menu.json')
         .then(response => response.json())
         .then(data => {
           this.json = data

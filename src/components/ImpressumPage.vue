@@ -45,7 +45,8 @@ export default {
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
 
-    fetch('http://testing.handwerker-akoenig.de/pages.json')
+    //fetch('http://testing.handwerker-akoenig.de/pages.json')
+    fetch('https://handwerker-akoenig.de/pages.json')
         .then(response => response.json())
         .then(data => {
           this.content = data.seiten.impressum

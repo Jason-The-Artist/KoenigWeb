@@ -56,7 +56,8 @@ export default {
   mounted() {
     this.$refs.root.className = this.$refs.root.className.replace("hide-page", "show-page")
 
-    fetch('http://testing.handwerker-akoenig.de/galery.json')
+    //fetch('http://testing.handwerker-akoenig.de/galery.json')
+    fetch('https://handwerker-akoenig.de/galery.json')
         .then(response => response.json())
         .then(data => {
           this.json = data
@@ -67,7 +68,8 @@ export default {
           console.error('Error fetching galery data:', error);
         });
 
-    fetch('http://testing.handwerker-akoenig.de/projects.json')
+    //fetch('http://testing.handwerker-akoenig.de/projects.json')
+    fetch('https://handwerker-akoenig.de/projects.json')
         .then(response => response.json())
         .then(data => {
           this.projects = data

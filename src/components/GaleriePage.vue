@@ -64,7 +64,8 @@ export default {
 
   mounted() {
 
-    fetch('http://testing.handwerker-akoenig.de/galery.json')
+    //fetch('http://testing.handwerker-akoenig.de/galery.json')
+    fetch('https://handwerker-akoenig.de/galery.json')
         .then(response => response.json())
         .then(data => {
           this.json = data
@@ -86,7 +87,8 @@ export default {
         });
 
 
-    fetch('http://testing.handwerker-akoenig.de/pages.json')
+    //fetch('http://testing.handwerker-akoenig.de/pages.json')
+    fetch('https://handwerker-akoenig.de/pages.json')
         .then(response => response.json())
         .then(data => {
           this.content = data.seiten.galerie
