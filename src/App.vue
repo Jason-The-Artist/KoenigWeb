@@ -3,10 +3,8 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-
-  <MainPage/>
   <main>
-    <div class="container my-3">
+    <div class="max-width">
       <router-view />
       <notifications/>
     </div>

@@ -1,11 +1,11 @@
 <template>
 <div ref="root" class="center-horizontal show-page">
-  <div class="fullwidth">
+  <div class="max-width">
     <div class="relative">
-      <div class="fullwidth absolute overflow-hidden">
+      <div class="max-width absolute overflow-hidden fullheight">
         <ImageSwipe/>
       </div>
-      <div class="absolute center-horizontal fullwidth">
+      <div class="absolute center-horizontal max-width">
         <div>
           <div class="block-space"></div>
           <div class="white-background main-text-box more-round-corner center-horizontal" style="margin-top: -50px">
@@ -28,11 +28,11 @@
 </div>
 
 
-  <div class="absolute center-horizontal">
-    <div class="fullwidth">
-      <MainNav @hide="hide"/>
-    </div>
+<div class="absolute center-horizontal max-width">
+  <div class="max-width">
+    <MainNav @hide="hide"/>
   </div>
+</div>
 </template>
 
 <script>

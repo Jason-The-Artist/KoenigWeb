@@ -124,6 +124,14 @@ a,
   width: 100vw;
 }
 
+.max-width{
+  width: 100%;
+}
+
+.max-height{
+  height: 100%;
+}
+
 .absolute{
   position: absolute;
 }
@@ -188,7 +196,9 @@ a,
 }
 
 .image-module{
-  width: 95%
+  width: 95%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 

@@ -1,10 +1,10 @@
 <template>
 <div class="relative">
-  <div class="absolute">
+  <div class="absolute max-width">
     <div class="outer-nav center-vertical">
-      <div class="fullwidth relative">
-        <div class="absolute">
-          <div class="display-flex fullwidth center-vertical">
+      <div class="max-width relative">
+        <div class="absolute max-width">
+          <div class="display-flex max-width center-vertical">
             <div class="white-background nav-height shadow" style="width: 5%"></div>
             <div class="nav-element nav-round-corner nav-logo-element shadow">
               <img src="../../assets/logo_transparent.png" class="nav-logo pointer" @click="mainClick">
@@ -27,7 +27,7 @@
 
 
         <div class="absolute">
-          <div class="display-flex fullwidth center-vertical">
+          <div class="display-flex max-width center-vertical">
             <div class="white-background nav-height" style="width: 5%"></div>
             <div class="nav-element nav-round-corner nav-logo-element">
               <img src="../../assets/logo_transparent.png" class="nav-logo pointer" @click="mainClick">

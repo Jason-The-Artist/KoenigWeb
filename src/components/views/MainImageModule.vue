@@ -7,7 +7,7 @@
     </div>
     <p>{{teaser}}</p>
     <div class="center-horizontal">
-      <button class="module-button pointer" @click="clicked">
+      <button class="module-button pointer" style="margin-top: 10px; margin-bottom: 10px" @click="clicked">
         <h2>Mehr ansehen</h2>
       </button>
     </div>
@@ -57,12 +57,15 @@ export default {
     },
 
     setImg(){
+
+      this.imgSrc = "https://handwerker-akoenig.de/images/" + this.thumb
+      /*
       this.imgSrc = document.baseURI
       if(this.imgSrc.includes("127.0.0.1") || this.imgSrc.includes("localhost")){
         this.imgSrc = this.imgSrc.split("/#/")[0] + "/src/assets/" + this.thumb
       }else{
         this.imgSrc = this.imgSrc.split("/#/")[0] + "/images/" + this.thumb
-      }
+      }*/
     }
   }
 

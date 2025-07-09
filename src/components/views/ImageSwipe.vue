@@ -67,6 +67,9 @@ export default {
   },
 
   created() {
+    if(window.location.href.includes("localhost")){
+      this.rootP = "https://handwerker-akoenig.de/images/slider/"
+    }
   },
 
   mounted() {
