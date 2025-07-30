@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://web.inforge.de/sitemap.xml
