@@ -146,16 +146,12 @@ a{
     color: #00ff00;
 }
 
-.dark-green{
-    color: green;
-}
-
 .white{
     color: #ffffff;
 }
 
 .decent-white{
-    color: #c5c5c5;
+    color: #dcdcdc;
 }
 
 .scroll{
@@ -197,28 +193,28 @@ a{
 }
 
 .prim-color{
-    color: #ff4f05;
+    color: #07956f;
 }
 
 .prim-color-background{
-    background: #ff4f05;
+    background: #07956f;
 
 }
 
-.decent-prim-background{
-    background: #ffe6dd;
+.bright-prim-color{
+    color: #34d198;
 }
 
 .sec-color{
-    color: #d105ff;
+    color: #fcd34d;
 }
 
 .sec-color-background{
-    background: #d105ff;
+    background: #fcd34d;
 }
 
-.column{
-    flex-direction: column;
+.decent-prim-background{
+    background: #d7efdf;
 }
 
 
@@ -241,16 +237,6 @@ a{
     height: 30px;
     outline: none;
     border: none;
-    background: transparent;
-}
-
-.functional-input{
-    border-radius: 5px;
-    width: 95%;
-    font-size: 20px;
-    height: 25px;
-    outline: none;
-    border: solid 1px gray;
     background: transparent;
 }
 
@@ -277,7 +263,7 @@ a{
 .background-layer{
     margin-right: 5px;
     margin-top: 3px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 95%;
     min-height: 50px;
     border: solid 1px #d8d8d8;
@@ -322,6 +308,10 @@ a{
 
 .shadow {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+.glow{
+    box-shadow: 0px 0px 100px #0a8f49
 }
 
 .contain{

@@ -35,6 +35,12 @@
   
   
     methods: {
+      getCookies(key){
+        return this.$cookies.get(key);
+      },
+      setCookies(key, value){
+        return this.$cookies.set(key, value, 2147483647);
+      },
     }
   }
   </script>

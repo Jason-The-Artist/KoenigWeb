@@ -1,38 +1,7 @@
-<script>
-
-import Header from "@/components/views/Header.vue";
-
-export default {
-  name: "App",
-  components: {Header},
-
-  created() {
-  },
-
-  mounted() {
-
-  },
-  data() {
-    return {
-    }
-  },
-
-  updated() {
-  },
-
-  methods: {
-
-  }
-}
+<script setup>
+import {RouterView } from 'vue-router'
 </script>
 
 <template>
-  <notifications />
-
-  <main>
-      <router-view />
-  </main>
+  <RouterView />
 </template>
-
-<style scoped>
-</style>
