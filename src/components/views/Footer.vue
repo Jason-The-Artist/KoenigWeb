@@ -44,15 +44,8 @@
   <div class="max-width footer center-horizontal">
     <div class="max-width">
       <div class="center-horizontal">
-        <div class="footer-inner center-horizontal" style="gap: 30px">
+        <div class="footer-inner center-horizontal">
           <div class="flex-1">
-            <h3 class="white">Leistungen</h3>
-            <p class="decent-text">Pflasterarbeiten</p>
-            <p class="decent-text">Terassenarbeiten</p>
-            <p class="decent-text">Trockenmauern</p>
-            <p class="decent-text">Eingangsgestaltung</p>
-          </div>
-          <div class="flex-1 center-horizontal">
             <div>
               <h3 class="white">Kontakt</h3>
               <p class="decent-text">+491733629360</p>

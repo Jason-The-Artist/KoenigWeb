@@ -8,10 +8,6 @@
   background: linear-gradient(90deg, #eaf3ef 0%, #f3f4ea 100%);
 }
 
-.head-glow{
-  box-shadow: 0px 0px 100px #0a8f49
-}
-
 .header-outer{
   height: 600px;
 }
@@ -24,146 +20,6 @@
   font-size: 80px;
 }
 
-.half-width{
-  width: 50%;
-}
-
-.down-icon{
-  opacity: 0.5;
-  transform: translateY(-60px);
-}
-
-.huge-headline{
-  font-size: 50px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.us-background{
-  background-color: #11192c;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.contact-background{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.about-half-width{
-  width: 50%;
-}
-
-.tri-width{
-  width: 33%;
-}
-
-.address-card{
-  width: 500px;
-  padding: 20px;
-}
-
-.message-card{
-  width: 500px;
-  padding: 20px;
-}
-
-.contact-circle{
-  width: 50px;
-  height: 50px;
-  background: rgb(37, 98, 233);
-}
-
-.hide-pizza{
-  display: flex;
-}
-
-.mobile-center-horizontal{
-  display: flex;
-}
-
-.mobile-center{
-  display: flex;
-  align-items: center;
-}
-
-.button-space{
-  width: 20px;
-}
-
-.contact-space{
-  width: 20px;
-}
-
-.inner-img{
-  width: 90%;
-}
-
-.main-tag{
-  width: fit-content;
-  border-radius: 100px;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background: #d7efdf;
-  color: #07956f;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.dark-tag{
-  width: fit-content;
-  border-radius: 100px;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background: #133c3f;
-  color: #34d198;;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.black-tag{
-  width: fit-content;
-  border-radius: 100px;
-  padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  background: #000000;
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-
-.rating-card{
-  width: fit-content;
-  height: fit-content;
-  padding: 15px;
-  border-radius: 10px;
-  background: white;
-}
-
-.round-icon{
-  width: 40px;
-  height: 40px;
-  border-radius: 200px;
-}
-
-.contact-opening{
-  padding: 20px;
-  background: #1f2937;
-}
 
 .sec-glow{
   box-shadow: 0px 0px 100px #fcd34d
@@ -189,13 +45,10 @@
   width: 90%;
 }
 
-
-@media (max-width: 1450px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+.huge-text{
+  font-size: 50px
 }
+
 
 @media (max-width: 1110px) {
   .mobile-column-reverse{
@@ -208,53 +61,11 @@
 }
 
 @media (max-width: 1000px) {
-  .hide-pizza{
-    display: none;
-  }
-  .half-width{
-    width: 100%;
-  }
-
-  .mobile-center-horizontal{
-    display: flex;
-    justify-content: center;
-  }
-
-  .mobile-center-text{
-    text-align: center;
-  }
-
-  .mobile-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .mobile-column{
     flex-direction: column;
   }
 
-}
-@media (max-width: 1060px) {
-  .contact-column{
-    flex-direction: column;
-  }
-
-  .address-card{
-    width: 85%;
-  }
-
-  .message-card{
-    width: 85%;
-  }
-
-  .contact-space{
-    height: 10px;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 @media (max-width: 600px) {
@@ -262,16 +73,8 @@
     font-size: 10vw;
   }
 
-  .mobile-button-column{
-    flex-direction: column;
-  }
-
-  .button-space{
-    height: 10px;
-  }
-
-  .small-mobile-font{
-    font-size: 12px;
+  .huge-text{
+    font-size: 35px
   }
 
 }
@@ -305,7 +108,7 @@
           <div class="half-width-ref center">
             <div class="inner-half">
               <div class="center-horizontal">
-                <h2 style="font-size: 50px" class="center-text reset-margin">Arbeiten im Garten</h2>
+                <h2 class="huge-text center-text reset-margin">Arbeiten im Garten</h2>
               </div>
               <div style="height: 20px"></div>
               <div>
@@ -321,11 +124,11 @@
 
         <div style="height: 200px"></div>
 
-        <div class="center">
-          <div class="half-width-ref center">
+        <div class="center mobile-column">
+          <div class="half-width-ref center on-top">
             <div class="inner-half">
               <div class="center-horizontal">
-                <h2 style="font-size: 50px" class="center-text reset-margin">Reparaturen und Ausbesserungen</h2>
+                <h2 class="huge-text center-text reset-margin">Reparaturen und Ausbesserungen</h2>
               </div>
               <div style="height: 20px"></div>
               <div>
@@ -355,7 +158,7 @@
           <div class="half-width-ref center">
             <div class="inner-half">
               <div class="center-horizontal">
-                <h2 style="font-size: 50px" class="center-text reset-margin">Outdoor-Flächen</h2>
+                <h2 class="huge-text center-text reset-margin">Outdoor-Flächen</h2>
               </div>
               <div style="height: 20px"></div>
               <div>

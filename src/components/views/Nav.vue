@@ -76,31 +76,18 @@
   border-radius: 100px;
 }
 
+.project-button-mobile{
+  padding: 4px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
 .logo{
   width: 200px;
   object-fit: contain;
 }
 
-@media (max-width: 650px) {
-  .nav-item{
-    margin-left: 10px;
-    text-decoration: none;
-    color: #5c5c5c;
-    transition: color 0.1s linear;
-  }
-
-  .logo-area{
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  .icon{
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .hide-nav{
     display: none;
   }
@@ -118,7 +105,7 @@
     <div class="nav center-horizontal">
       <div class="space-between max-height main-content-width center-vertical">
         <div class="center-vertical">
-          <img src="../../assets/logo.png" class="logo"/>
+          <img src="../../assets/logo.png" class="logo pointer" @click="$router.push('/')">
         </div>
         <div>
           <div class="center-vertical hide-nav">
@@ -142,16 +129,21 @@
       </div>
     </div>
     <div class="mobile-nav" :class="showMobileMenu ? 'mobile-nav-height' : ''">
-      <p class="reset-margin max-width center-text"><a href="/#home" class="nav-item" @click="hideMobileNav">Startseite</a></p>
+      <p class="reset-margin max-width center-text"><a href="/" class="nav-item" @click="hideMobileNav">Start</a></p>
       <div style="height: 10px"></div>
-      <p class="reset-margin max-width center-text"><a href="/#menu" class="nav-item" @click="hideMobileNav">Leistungen</a></p>
+      <p class="reset-margin max-width center-text"><a href="/leistungen" class="nav-item" @click="hideMobileNav">Leistungen</a></p>
       <div style="height: 10px"></div>
-      <p class="reset-margin max-width center-text"><a href="/#about" class="nav-item" @click="hideMobileNav">Über uns</a></p>
+      <p class="reset-margin max-width center-text"><a href="/galerie" class="nav-item" @click="hideMobileNav">Galerie</a></p>
       <div style="height: 10px"></div>
-      <p class="reset-margin max-width center-text"><a href="/#projects" class="nav-item" @click="hideMobileNav">Projekte</a></p>
+      <p class="reset-margin max-width center-text"><a href="/kontakt" class="nav-item" @click="hideMobileNav">Kontakt</a></p>
       <div style="height: 10px"></div>
-      <p class="reset-margin max-width center-text"><a href="/#contact" class="nav-item" @click="hideMobileNav">Kontakt</a></p>
-      <div style="height: 10px"></div>
+      <div class="center-horizontal">
+        <div class="project-button-mobile prim-color-background center-vertical pointer" @click="$router.push('/kontakt')">
+          <div style="width: 10px"></div>
+          <p class="reset-margin white bold">Projekt starten</p>
+          <div style="width: 10px"></div>
+        </div>
+      </div>
     </div>
     <div class="gradient max-width"></div>
   </div>

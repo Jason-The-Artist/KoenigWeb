@@ -63,6 +63,7 @@ a{
 }
 
 .full-round{
+    aspect-ratio: 1/1;
     border-radius: 9000px;
 }
 

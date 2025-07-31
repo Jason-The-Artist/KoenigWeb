@@ -145,7 +145,7 @@ export default {
             {
               title: "Keramikplatte + WPC",
               folder: "keramikpalette",
-              images: ["keramikpalette1.jpg", "keramikpalette2.jpg", "keramikpaletteo3.jpg", "keramikpalette4.jpg",
+              images: ["keramikpalette1.jpg", "keramikpalette2.jpg", "keramikpalette3.jpg", "keramikpalette4.jpg",
                 "keramikpalette5.jpg", "keramikpalette6.jpg", "keramikpalette7.jpg", "keramikpalette8.jpg", "keramikpalette9.jpg",
                 "keramikpalette10.jpg", "keramikpalette11.jpg", "keramikpalette12.jpg", "keramikpalette13.jpg", ],
               year: "2019",
@@ -170,7 +170,7 @@ export default {
             {
               title: "Pooldeck Lärche",
               folder: "pooldeck-laerche",
-              images: ["pooldeck-laerche1.jpg", "pooldeck-laerche2.jpg", "pooldeck-laercheo3.jpg", "pooldeck-laerche4.jpg",
+              images: ["pooldeck-laerche1.jpg", "pooldeck-laerche2.jpg", "pooldeck-laerche3.jpg", "pooldeck-laerche4.jpg",
                 "pooldeck-laerche5.jpg", "pooldeck-laerche6.jpg", "pooldeck-laerche7.jpg", "pooldeck-laerche8.jpg", "pooldeck-laerche9.jpg"],
               year: "2017",
               city: "Bonn",

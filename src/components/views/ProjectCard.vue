@@ -28,12 +28,22 @@
   background: rgba(0, 112, 48, 0.8);
 }
 
+@media (max-width: 600px) {
+
+  .grid2{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
 </style>
 
 <template>
 
   <div class="card round-corner overflow-hidden relative" :class="isFull ? 'full-size' : ''">
-    <div class="absolute max-width max-height bottom on-top">
+    <div class="absolute max-width max-height bottom" style="z-index: 999">
       <div class="bottom-line center pointer" @click="isFull = !isFull">
         <p class="default-textsize bold reset-margin white"><span v-if="!isFull">Ausklappen</span><span v-else>Einklappen</span></p>
       </div>
