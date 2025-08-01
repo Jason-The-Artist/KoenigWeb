@@ -9,7 +9,8 @@
 }
 
 .header-outer{
-  height: 600px;
+  padding-top: 160px;
+  padding-bottom: 100px;
 }
 
 .header-inner{
@@ -66,6 +67,10 @@
     flex-direction: column;
   }
 
+  .mobile-margin{
+    margin-top: 30px;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -75,6 +80,11 @@
 
   .huge-text{
     font-size: 35px
+  }
+
+  .header-outer{
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
 
 }
@@ -100,7 +110,7 @@
         <div style="height: 150px"></div>
 
         <div class="center mobile-column-reverse">
-          <div class="half-width-ref center">
+          <div class="half-width-ref center mobile-margin">
             <div class="center inner">
               <img src="../assets/gallery/titelbildmartina.jpg" class="max-width round-corner glow">
             </div>
@@ -125,7 +135,7 @@
         <div style="height: 200px"></div>
 
         <div class="center mobile-column">
-          <div class="half-width-ref center on-top">
+          <div class="half-width-ref center small-top">
             <div class="inner-half">
               <div class="center-horizontal">
                 <h2 class="huge-text center-text reset-margin">Reparaturen und Ausbesserungen</h2>
@@ -140,7 +150,7 @@
               </div>
             </div>
           </div>
-          <div class="half-width-ref center">
+          <div class="half-width-ref center mobile-margin">
             <div class="center inner-half">
               <img src="../assets/gallery/titelbildmartina.jpg" class="max-width round-corner sec-glow">
             </div>
@@ -150,7 +160,7 @@
         <div style="height: 200px"></div>
 
         <div class="center mobile-column-reverse">
-          <div class="half-width-ref center">
+          <div class="half-width-ref center mobile-margin">
             <div class="center inner">
               <img src="../assets/gallery/titelbildmartina.jpg" class="max-width round-corner blue-glow">
             </div>

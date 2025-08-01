@@ -128,7 +128,7 @@ export default {
             {
               title: "Farbe: Rechteckpflaster Muschelkalk - Pallisade Betongrau",
               folder: "rechteckpflaster",
-              images: ["rechteckpflaster1.jpg", "rechteckpflaster2.jpg", "rechteckpflastero3.jpg", "rechteckpflaster4.jpg",
+              images: ["rechteckpflaster1.jpg", "rechteckpflaster2.jpg", "rechteckpflaster3.jpg", "rechteckpflaster4.jpg",
                 "rechteckpflaster5.jpg", "rechteckpflaster6.jpg", "rechteckpflaster7.jpg", "rechteckpflaster8.jpg", "rechteckpflaster9.jpg",
                 "rechteckpflaster10.jpg", "rechteckpflaster11.jpg", "rechteckpflaster12.jpg", "rechteckpflaster13.jpg", ],
               year: "2020",
@@ -186,7 +186,7 @@ export default {
             {
               title: "Santuro Mauer",
               folder: "santuro",
-              images: ["santuro1.jpg", "santuro2.jpg", "santuroo3.jpg", "santuro4.jpg",
+              images: ["santuro1.jpg", "santuro2.jpg", "santuro3.jpg", "santuro4.jpg",
                 "santuro5.jpg", "santuro6.jpg", "santuro7.jpg", "santuro8.jpg"],
               year: "2015",
               city: "Frankfurt",
@@ -195,7 +195,7 @@ export default {
             {
               title: "Diephaus Mauer 50 x25 x 15",
               folder: "diephaus",
-              images: ["diephaus1.jpg", "diephaus2.jpg", "diephauso3.jpg", "diephaus4.jpg",
+              images: ["diephaus1.jpg", "diephaus2.jpg", "diephaus3.jpg", "diephaus4.jpg",
                 "diephaus5.jpg", "diephaus6.jpg"],
               year: "2018",
               city: "Berlin",
@@ -211,7 +211,7 @@ export default {
             {
               title: "Eingangstreppe Außenbereich",
               folder: "eingangstreppe",
-              images: ["eingangstreppe1.jpg", "eingangstreppe2.jpg", "eingangstreppeo3.jpg", "eingangstreppe4.jpg",
+              images: ["eingangstreppe1.jpg", "eingangstreppe2.jpg", "eingangstreppe3.jpg", "eingangstreppe4.jpg",
                 "eingangstreppe5.jpg", "eingangstreppe6.jpg", "eingangstreppe7.jpg"],
               year: "2021",
               city: "Münster",
@@ -220,7 +220,7 @@ export default {
             {
               title: "Treppenpodest teilweise überdacht",
               folder: "treppenpodest",
-              images: ["treppenpodest1.jpg", "treppenpodest2.jpg", "treppenpodesto3.jpg", "treppenpodest4.jpg",
+              images: ["treppenpodest1.jpg", "treppenpodest2.jpg", "treppenpodest3.jpg", "treppenpodest4.jpg",
                 "treppenpodest5.jpg", "treppenpodest6.jpg"],
               year: "2022",
               city: "Dortmund",

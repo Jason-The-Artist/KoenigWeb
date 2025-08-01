@@ -48,6 +48,10 @@ a{
     z-index: 9999;
 }
 
+.small-top{
+    z-index: 99;
+}
+
 .limit-text {
     white-space: nowrap;
     overflow: hidden;

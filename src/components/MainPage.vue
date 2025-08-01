@@ -39,12 +39,6 @@
   gap: 20px;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
 .us-background{
   background-color: #11192c;
   padding-top: 100px;
@@ -60,49 +54,11 @@
   width: 50%;
 }
 
-.tri-width{
-  width: 33%;
-}
-
-.address-card{
-  width: 500px;
-  padding: 20px;
-}
-
-.message-card{
-  width: 500px;
-  padding: 20px;
-}
-
-.contact-circle{
-  width: 50px;
-  height: 50px;
-  background: rgb(37, 98, 233);
-}
-
-.hide-pizza{
-  display: flex;
-}
-
 .mobile-center-horizontal{
   display: flex;
 }
-
-.mobile-center{
-  display: flex;
-  align-items: center;
-}
-
 .button-space{
   width: 20px;
-}
-
-.contact-space{
-  width: 20px;
-}
-
-.inner-img{
-  width: 90%;
 }
 
 .main-tag{
@@ -128,39 +84,6 @@
   font-size: 13px;
   font-weight: bold;
 }
-
-.black-tag{
-  width: fit-content;
-  border-radius: 100px;
-  padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  background: #000000;
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-
-.rating-card{
-  width: fit-content;
-  height: fit-content;
-  padding: 15px;
-  border-radius: 10px;
-  background: white;
-}
-
-.round-icon{
-  width: 40px;
-  height: 40px;
-  border-radius: 200px;
-}
-
-.contact-opening{
-  padding: 20px;
-  background: #1f2937;
-}
-
 @media (max-width: 1450px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -169,9 +92,6 @@
 }
 
 @media (max-width: 1000px) {
-  .hide-pizza{
-    display: none;
-  }
   .half-width{
     width: 100%;
   }
@@ -185,36 +105,19 @@
     text-align: center;
   }
 
-  .mobile-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .mobile-column{
     flex-direction: column;
   }
 
 }
 @media (max-width: 1060px) {
-  .contact-column{
-    flex-direction: column;
-  }
-
-  .address-card{
-    width: 85%;
-  }
-
-  .message-card{
-    width: 85%;
-  }
-
-  .contact-space{
-    height: 10px;
-  }
 
   .product-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mobile-margin{
+    margin-top: 70px;
   }
 }
 
@@ -235,6 +138,12 @@
     font-size: 12px;
   }
 
+}
+
+@media (max-width: 500px) {
+  .huge-headline{
+    font-size: 40px;
+  }
 }
 
 </style>
@@ -265,7 +174,7 @@
           </div>
         </div>
       </div>
-      <div class="center half-width relative max-height">
+      <div class="center half-width max-height mobile-margin">
         <img src="../assets/sample-main.jpg" class="max-width fade-before round-corner glow" :class="fadePizza ? 'fade-after' : ''">
       </div>
     </div>
