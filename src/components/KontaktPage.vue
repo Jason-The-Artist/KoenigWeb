@@ -148,7 +148,7 @@
                     <div style="width: 20px"></div>
                     <div>
                       <p class="reset-margin bold">Telefon</p>
-                      <p class="reset-margin decent-color">+491733629360</p>
+                      <p class="reset-margin decent-color">+49 173 3629360</p>
                     </div>
                   </div>
                   <div style="height: 20px"></div>

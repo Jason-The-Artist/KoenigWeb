@@ -4,6 +4,8 @@ import LeistungenPage from "@/components/LeistungenPage.vue";
 import GalleryPage from "@/components/GalleryPage.vue"
 import ProjectPage from "@/components/ProjectPage.vue"
 import KontaktPage from "@/components/KontaktPage.vue";
+import Datenschutz from "@/components/Datenschutz.vue"
+import Impressum from "@/components/Impressum.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +29,14 @@ const router = createRouter({
     {
       path: '/galerie/:project',
       component: ProjectPage
+    },
+    {
+      path: '/datenschutz',
+      component: Datenschutz
+    },
+    {
+      path: '/impressum',
+      component: Impressum
     },
     {
       path: '/kontakt',

@@ -70,7 +70,8 @@
         </div>
       </div>
       <div>
-        <img v-for="dat in images" :src="'../../src/assets/gallery/' + folder + '/' + dat" class="max-width round-corner"/>
+        <img v-if="isFull" v-for="dat in images" :src="'../../src/assets/gallery/' + folder + '/' + dat" class="max-width round-corner"/>
+        <img v-else :src="'../../src/assets/gallery/' + folder + '/' + images[images.length - 1]" class="max-width round-corner"/>
       </div>
     </div>
   </div>
