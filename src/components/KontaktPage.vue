@@ -88,6 +88,14 @@
 
 <template>
 
+  <transition name="toast">
+    <Toast color="green" :text="successToastText" v-if="showSuccessToast" style="z-index: 89990" />
+  </transition>
+
+  <transition name="toast">
+    <Toast color="red" :text="errorToastText" v-if="showErrorToast" style="z-index: 89800" />
+  </transition>
+
   <Nav current="kontakt" class="on-top"/>
 
   <div class="header-background header-outer center" id="home">
@@ -183,32 +191,32 @@
                 <div class="center">
                   <div class="flex-1">
                     <div>
-                      <p class="reset-margin">Vorname</p>
+                      <p class="reset-margin">Vorname*</p>
                     </div>
                     <div class="center-horizontal max-width">
                       <div class="input-layer">
-                        <input class="input"/>
+                        <input class="input" v-model="firstName"/>
                       </div>
                     </div>
                   </div>
                   <div class="flex-1">
                     <div>
-                      <p class="reset-margin">Nachname</p>
+                      <p class="reset-margin">Nachname*</p>
                     </div>
                     <div class="center-horizontal max-width">
                       <div class="input-layer">
-                        <input class="input"/>
+                        <input class="input" v-model="lastName"/>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div style="height: 10px"></div>
                 <div>
-                  <p class="reset-margin">E-Mail</p>
+                  <p class="reset-margin">E-Mail*</p>
                 </div>
                 <div class="center-horizontal max-width">
                   <div class="input-layer">
-                    <input class="input">
+                    <input class="input" v-model="email">
                   </div>
                 </div>
                 <div style="height: 10px"></div>
@@ -217,19 +225,25 @@
                 </div>
                 <div class="center-horizontal max-width">
                   <div class="input-layer">
-                    <input class="input">
+                    <input class="input" v-model="telephone">
                   </div>
                 </div>
                 <div style="height: 10px"></div>
                 <div>
-                  <p class="reset-margin">Ihr Anliegen</p>
+                  <p class="reset-margin">Ihr Anliegen*</p>
                 </div>
                 <div class="center-horizontal max-width">
-                  <textarea class="textarea" style="min-height: 100px; font-size: 15px"/>
+                  <textarea class="textarea" v-model="message" style="min-height: 100px; font-size: 15px"/>
                 </div>
                 <div style="height: 10px"></div>
+                <p class="reset-margin">Beim Absenden des Kontaktformulares stimme ich die <a href="/datenschutz">Datenschutzbestimmungen</a> zu.</p>
+                <div style="height: 10px"></div>
+                <div class="center-horizontal" v-if="errorText !== ''">
+                  <p class="reset-margin red">{{errorText}}</p>
+                  <div style="height: 10px"></div>
+                </div>
                 <div class="center-horizontal">
-                  <UIButton title="Absenden"/>
+                  <UIButton title="Absenden" @click="onSubmit"/>
                 </div>
               </div>
             </div>
@@ -255,10 +269,13 @@ import Footer from "@/components/views/Footer.vue"
 import GalleryCard from "@/components/views/GalleryCard.vue"
 import LeistungLine from "@/components/views/LeistungLine.vue"
 import ProjectCard from "@/components/views/ProjectCard.vue"
+import axios from "axios";
+import Toast from "@/components/views/Toast.vue";
 
 export default {
   name: "KontaktPage",
   components: {
+    Toast,
     ProjectCard,
     LeistungLine,
     GalleryCard,
@@ -266,6 +283,16 @@ export default {
     Icon, UIButton, Nav, Mail20Regular, Location20Regular, Call20Regular},
   data() {
     return {
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+      telephone: "",
+      errorText: "",
+      showSuccessToast: false,
+      showErrorToast: false,
+      successToastText: "",
+      errorToastText: "",
     };
   },
 
@@ -276,6 +303,57 @@ export default {
   },
 
   methods: {
+    onSubmit(){
+
+      if(this.firstName === "" || this.lastName === "" || this.email === "" || this.message === ""){
+        this.errorText = "Es müssen alle Felder, die mit * markiert sind, ausgefüllt werden."
+        return
+      }
+
+      this.errorText = ""
+
+      const url = import.meta.env.VITE_CONTACT_URL;
+      const data = {
+        name: this.firstName + " " + this.lastName,
+        email: this.email,
+        telephone: this.telephone,
+        message: this.message,
+        receiver: "info-handwerker.akoenig@gmx.de"
+      };
+
+      axios.post(url, data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(response => {
+        console.log('Erfolg:', response.data);
+        this.successToastText = "Ihre Nachricht wurde erfolgreich gesendet."
+        this.displaySuccessToast()
+        this.firstName = ""
+        this.lastName = ""
+        this.email = ""
+        this.message = ""
+        this.telephone = ""
+      }).catch(error => {
+        console.error('Fehler:', error);
+        this.errorToastText = "Es ist ein Fehler aufgetreten. Bitte versuchen sie es später erneut."
+        this.displayErrorToast()
+      });
+    },
+
+    displaySuccessToast() {
+      this.showSuccessToast = true
+      setTimeout(() => {
+        this.showSuccessToast = false
+      }, 4000)
+    },
+
+    displayErrorToast() {
+      this.showErrorToast = true
+      setTimeout(() => {
+        this.showErrorToast = false
+      }, 4000)
+    },
   }
 }
 </script>
