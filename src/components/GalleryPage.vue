@@ -70,7 +70,7 @@
     <div class="leistung-content-width center-horizontal">
       <div class="product-grid max-width">
         <GalleryCard title="Pflasterarbeiten" :count="2" sub="Sub-Text für Pflasterarbeiten" nav="/galerie/pflasterarbeiten" img="pflasterarbeiten.jpg"><HealingRound/></GalleryCard>
-        <GalleryCard title="Terassen" :count="2" sub="Sub-Text für Terassen" nav="/galerie/terassen" img="terassen.jpg"><Wall/></GalleryCard>
+        <GalleryCard title="Terassen" :count="6" sub="Sub-Text für Terassen" nav="/galerie/terassen" img="terassen.jpg"><Wall/></GalleryCard>
         <GalleryCard title="Pooldecks" :count="1" sub="Sub-Text für Pooldecks" nav="/galerie/pooldecks" img="pooldecks.jpg"><GrassFilled/></GalleryCard>
         <GalleryCard title="Trockenmauern" :count="2" sub="Sub-Text für Trockenmauern" nav="/galerie/trockenmauern" img="trockenmauern.jpg"><GrassFilled/></GalleryCard>
         <GalleryCard title="Eingangsgestaltung mit Naturstein" :count="3" sub="Sub-Text für Eingangsgestaltung" nav="/galerie/eingangsgestaltung" img="eingangsgestaltung.jpg"><GrassFilled/></GalleryCard>

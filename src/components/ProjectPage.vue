@@ -143,22 +143,52 @@ export default {
           nav: "terassen",
           projects: [
             {
-              title: "Keramikplatte + WPC",
-              folder: "keramikpalette",
-              images: ["keramikpalette1.jpg", "keramikpalette2.jpg", "keramikpalette3.jpg", "keramikpalette4.jpg",
-                "keramikpalette5.jpg", "keramikpalette6.jpg", "keramikpalette7.jpg", "keramikpalette8.jpg", "keramikpalette9.jpg",
-                "keramikpalette10.jpg", "keramikpalette11.jpg", "keramikpalette12.jpg", "keramikpalette13.jpg", ],
-              year: "2019",
-              city: "Berlin",
-              description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem"
+              title: "Lounge",
+              folder: "terassen/lounge",
+              images: ["20220821_105102.jpg", "20220821_105329.jpg", "20221113_101122.jpg"],
+              year: "",
+              city: "",
+              description: "<ul><li>Mauersteine geklebt</li><li>Kantholz 10x12 gehobelt und lasiert</li></ul>"
             },
             {
-              title: "Alter Terrassenbelag und alte Unterkonstruktion",
-              folder: "terassenbelag",
-              images: [],
-              year: "2023",
-              city: "Kassel",
-              description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem"
+              title: "Terrasse 90x60x2 gebundene Bauweise",
+              folder: "terassen/terasse-90-60-2",
+              images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "6.jpg"],
+              year: "",
+              city: "",
+              description: "Terrassenplatten gebundene Bauweise<ul><li>Keramikplatte 90x60x2 geklebt</li></ul>"
+            },
+            {
+              title: "Terrasse Keramik 60x60x2 auf Alu Unterkonstruktion",
+              folder: "terassen/terasse-keramik",
+              images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"],
+              year: "",
+              city: "",
+              description: "<ul><li>Keramikplatte 90x60x2 geklebt</li></ul>"
+            },
+            {
+              title: "Terrasse Keramik40x80x3 Keramik auf Stelzlager",
+              folder: "terassen/terasse-40-80-3",
+              images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"],
+              year: "",
+              city: "",
+              description: "Terrassenplatten auf Stelzlager verlegt (Halbverband)<br>Keramikplatte 80x40x3"
+            },
+            {
+              title: "Terrasse Keramikplatte 100x100x2 auf Stelzlager",
+              folder: "terassen/terasse-100-100-2",
+              images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"],
+              year: "",
+              city: "",
+              description: "Terrassenplatten auf Stelzlager verlegt (Halbverband)<br>Keramikplatte 80x40x3"
+            },
+            {
+              title: "Terrasse WPC Diele auf Alu Unterkonstruktion",
+              folder: "terassen/terasse-wpc",
+              images: ["20240527_125720.jpg", "20240527_125725.jpg", "IMG-20250809-WA0048.jpg", "IMG-20250809-WA0049.jpg", "IMG-20250809-WA0050.jpg"],
+              year: "",
+              city: "",
+              description: "Terrassenplatten auf Stelzlager verlegt. Mit Randeinfassung und Blende aus Aluminium.<br>Keramikplatte 100x100x2"
             }
           ]
         },

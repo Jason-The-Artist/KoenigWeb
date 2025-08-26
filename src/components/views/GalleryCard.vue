@@ -48,6 +48,12 @@
   border-color: #07956f;
 }
 
+.small-circle{
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+
 .count-view{
   margin: 10px;
   padding: 10px;
@@ -74,7 +80,14 @@
         <div class="info-layout">
           <h2 class="reset-margin bold">{{title}}</h2>
           <div style="height: 10px"></div>
-          <p class="decent-color reset-margin">{{sub}}</p>
+          <div v-for="dat in list">
+            <div style="height: 10px"></div>
+            <div class="center-vertical">
+              <div class="small-circle prim-color-background"></div>
+              <div style="width: 10px"></div>
+              <p class="reset-margin decent-color">{{dat}}</p>
+            </div>
+          </div>
         </div>
       </div>
       <div style="height: 10px"></div>
@@ -103,7 +116,7 @@ export default {
   props: {
     title: String,
     img: String,
-    sub: String,
+    list: Array,
     nav: String,
     count: Number
   },

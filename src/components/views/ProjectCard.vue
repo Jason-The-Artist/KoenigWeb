@@ -53,19 +53,23 @@
         <div class="smaller-width">
           <h2 class="prim-color" style="font-size: 30px">{{title}}</h2>
           <div class="center-vertical">
-            <Icon size="25">
-              <Location20Regular/>
-            </Icon>
-            <div style="width: 5px"></div>
-            <p class="reset-margin default-textsize">{{city}}</p>
-            <div style="width: 30px"></div>
-            <Icon size="25">
-              <CalendarClearOutline/>
-            </Icon>
-            <div style="width: 5px"></div>
-            <p class="reset-margin default-textsize">{{year}}</p>
+            <div v-if="city !== ''" class="center-vertical">
+              <Icon size="25">
+                <Location20Regular/>
+              </Icon>
+              <div style="width: 5px"></div>
+              <p class="reset-margin default-textsize">{{city}}</p>
+              <div style="width: 30px"></div>
+            </div>
+            <div v-if="year !== ''" class="center-vertical">
+              <Icon size="25">
+                <CalendarClearOutline/>
+              </Icon>
+              <div style="width: 5px"></div>
+              <p class="reset-margin default-textsize">{{year}}</p>
+            </div>
           </div>
-          <p class="default-textsize">{{description}}</p>
+          <p class="default-textsize" v-html="description"></p>
           <div style="height: 20px"></div>
         </div>
       </div>

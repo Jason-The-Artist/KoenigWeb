@@ -9,7 +9,7 @@
 }
 
 .header-outer{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header-inner{
@@ -17,7 +17,7 @@
 }
 
 .main-headline{
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .half-width{
@@ -159,7 +159,7 @@
           <div class="mobile-center-horizontal">
             <div class="main-tag">Professionelles Handwerk seit 2015</div>
           </div>
-          <h1 class="reset-margin main-headline mobile-center-text">Träume werden <span class="prim-color">Realität</span></h1>
+          <h1 class="reset-margin main-headline mobile-center-text">Solides <span class="prim-color">Handwerk</span> der Ihren Erwartungen entspricht</h1>
           <p class="default-textsize decent-color fade-before mobile-center-text" :class="fadeSubHeader ? 'fade-after' : ''">Von der Idee bis zum perfekten Ergebnis – ich verwandle Ihre Visionen in greifbare Meisterwerke. Handwerk mit Herz und Verstand.</p>
           <div class="mobile-center-horizontal fade-before mobile-button-column" :class="fadeSubButtons ? 'fade-after' : ''">
             <div class="center-horizontal">
@@ -193,10 +193,10 @@
           <div class="main-tag">Meine Leistungen</div>
         </div>
         <div class="center-horizontal">
-          <h2 class="huge-headline center-text">Professionelles Handwerk für jeden Bedarf</h2>
+          <h2 class="huge-headline center-text">Professionelles Handwerk für jeden Bedarf aus einer Hand</h2>
         </div>
         <div class="center-horizontal">
-          <p class="decent-color default-textsize reset-margin center-text">Von Pflasterarbeiten bis zur Terassengestaltung - wir bieten Ihnen das komplette Spektrum professioneller Handwerksarbeiten.</p>
+          <p class="decent-color default-textsize reset-margin center-text">Wir bieten Ihnen ein großes Spektrum von Handwerksarbeiten an ihrem Haus und gestalten ihre Außenanlage nach Ihren Wünschen. Durch eine gute Vernetzung mit unseren Partnerbetrieben, sind wir in der Lage auch herausfordernde Projekte zu meistern.</p>
         </div>
       </div>
     </div>
@@ -207,9 +207,9 @@
   <div class="center-horizontal">
     <div class="leistung-content-width center-horizontal">
       <div class="product-grid max-width">
-        <LeistungCard title="Pflasterarbeiten" sub="Sub-Text für Pflasterarbeiten" :list="['Kleine Steine', 'Große Steine', 'Spezielles Muster']"><HealingRound/></LeistungCard>
-        <LeistungCard title="Trockenmauern" sub="Sub-Text für Trockenmauern" :list="['Kleine Wände', 'Rote Wände', 'Mit Muster']"><Wall/></LeistungCard>
-        <LeistungCard title="Terassengestaltung" sub="Sub-Text für Terassengestaltng" :list="['Holzboden', 'Verschiedene Formen', 'Regenschutz']"><GrassFilled/></LeistungCard>
+        <LeistungCard title="Pflasterarbeiten" :list="['Betonpflaster', 'Natursteinpflaster', 'Platten', 'Gehwege', 'Grillplätze']"><HealingRound/></LeistungCard>
+        <LeistungCard title="Trockenmauern" :list="['Natursteinmauern', 'Betonmauern', 'Sichtschutzmauer', 'Sichtschutzzäune', 'Sitzecken', 'Ruinen']"><Wall/></LeistungCard>
+        <LeistungCard title="Terassengestaltung" :list="['Keramikplatten', 'Aluminium', 'Unterkonstruktion', 'Stelzlager', 'WPC Diehlen']"><GrassFilled/></LeistungCard>
       </div>
     </div>
   </div>
@@ -239,9 +239,9 @@
     <div class="center-horizontal">
       <div class="leistung-content-width center-horizontal">
         <div class="product-grid max-width">
-          <GalleryCard title="Eingangstreppe Außenbereich" sub="Die Eigangstreppe im Außenbereich mit dem Material Granit" nav="/galerie/eingangsgestaltung/#eingangstreppe-aussenbereich" img="titelbilddeck.jpg"><HealingRound/></GalleryCard>
-          <GalleryCard title="Keramikplatte + WPC" sub="Kombination aus Keramikplatte Grau Format 100cm x 100cm + WPC Diele Kastanienbraun" nav="/galerie/terassen/#keramikpalette-wpc" img="titelbildhein.jpg"><Wall/></GalleryCard>
-          <GalleryCard title="Pooldeck Lärche" sub="Pooldeck, Unterkonstruktion Bankirai + Deckbelag aus Lärche" nav="/galerie/pooldecks/#pooldecks-laerche" img="titelbildmartina.jpg"><GrassFilled/></GalleryCard>
+          <GalleryCard title="Pooldeck" :list="['Unterkonstruktion aus Tropenholz', 'Deckbelag aus Lärchenholz']" nav="/galerie/pooldecks" img="titelbilddeck.jpg"><HealingRound/></GalleryCard>
+          <GalleryCard title="Eingangstreppe" :list="['Fundament aus Beton', 'Treppenbelag aus Granit']" nav="/galerie/eingangsgestaltung" img="titelbildhein.jpg"><Wall/></GalleryCard>
+          <GalleryCard title="Terrasse kombiniert" :list="['Unterkonstruktion aus Aluminium', 'Terrassenbelag aus Keramik und WPC']" nav="/galerie/terassen" img="titelbildmartina.jpg"><GrassFilled/></GalleryCard>
         </div>
       </div>
     </div>
@@ -265,7 +265,7 @@
             <div class="dark-tag">Über mich</div>
           </div>
           <h1 class="huge-headline white mobile-center-text">Hinter jedem Projekt steht <span class="bright-prim-color">Leidenschaft</span></h1>
-          <p class="default-textsize reset-margin mobile-center-text decent-white">Ich bin nicht nur Handwerker – ich bin Problemlöser, Träume-Verwirklicher und manchmal auch Zauberer. Mit über 10 Jahren Erfahrung und einer großen Begeisterung absolviere ich jedes Projekt.</p>
+          <p class="default-textsize reset-margin mobile-center-text decent-white">Ich bin nicht nur Handwerker – ich bin ein Problemlöser, Träume-Verwirklicher und manchmal auch Therapeut. Mit großer Erfahrung und handwerklichem Geschick, gehe ich an Ihr Projekt ran. Eine durchdachte Planung, das richtige Aufmaß und Auswahl Hochwertiger Materialien, garantieren das beste Ergebnis für Sie.</p>
           <div style="height: 20px"></div>
           <div class="flex">
             <div class="center-vertical about-half-width">

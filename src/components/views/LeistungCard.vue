@@ -56,9 +56,6 @@
       <div class="center-vertical space-between">
         <h2 class="reset-margin">{{title}}</h2>
       </div>
-      <div>
-        <p class="decent-color">{{sub}}</p>
-      </div>
       <div v-for="dat in list">
         <div style="height: 10px"></div>
         <div class="center-vertical">
@@ -88,7 +85,6 @@ export default {
 
   props: {
     title: String,
-    sub: String,
     list: Array
   },
 
