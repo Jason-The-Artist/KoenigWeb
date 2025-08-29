@@ -143,7 +143,7 @@
                     <div style="width: 20px"></div>
                     <div>
                       <p class="reset-margin bold">Adresse</p>
-                      <p class="reset-margin decent-color">Musterstraße 123, 12345 Berlin</p>
+                      <p class="reset-margin decent-color">In der Lache 44, 34295 Edermünde</p>
                     </div>
                   </div>
                   <div style="height: 20px"></div>

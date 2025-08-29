@@ -126,7 +126,7 @@
                 <LeistungLine title="Pflanzungen jeder Art" color="green"/>
                 <LeistungLine title="Arbeiten an Rasenfläschen" color="green"/>
                 <LeistungLine title="Baum- und Heckenpflege" color="green"/>
-                <LeistungLine title="Bewässerungssysteme" color="green"/>
+                <LeistungLine title="Rebschnitt und Erziehung" color="green"/>
               </div>
             </div>
           </div>
@@ -144,15 +144,16 @@
               <div>
                 <LeistungLine title="Reparaturen aller Art" color="sec"/>
                 <LeistungLine title="Kreative Umbauten" color="sec"/>
-                <LeistungLine title="Präzise Montagearbeiten" color="sec"/>
-                <LeistungLine title="Individuelle Anfertigungen" color="sec"/>
-                <LeistungLine title="Wartung & Pflege" color="sec"/>
+                <LeistungLine title="Montagearbeiten" color="sec"/>
+                <LeistungLine title="Trockenbau" color="sec"/>
+                <LeistungLine title="Installationen" color="sec"/>
+                <LeistungLine title="Sanierungsarbeiten" color="sec"/>
               </div>
             </div>
           </div>
           <div class="half-width-ref center mobile-margin">
             <div class="center inner-half">
-              <img src="../assets/gallery/titelbildmartina.jpg" class="max-width round-corner sec-glow">
+              <img src="../assets/leistung/bild2.jpg" class="max-width round-corner sec-glow">
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@
         <div class="center mobile-column-reverse">
           <div class="half-width-ref center mobile-margin">
             <div class="center inner">
-              <img src="../assets/gallery/titelbildmartina.jpg" class="max-width round-corner blue-glow">
+              <img src="../assets/leistung/bild1.jpg" class="max-width round-corner blue-glow">
             </div>
           </div>
           <div class="half-width-ref center">
@@ -173,10 +174,11 @@
               <div style="height: 20px"></div>
               <div>
                 <LeistungLine title="Traumterrassen erschaffen" color="blue"/>
-                <LeistungLine title="Kunstvolle Pflasterarbeiten" color="blue"/>
-                <LeistungLine title="Holz- und Metallzäune" color="blue"/>
-                <LeistungLine title="Carports & Überdachungen" color="blue"/>
-                <LeistungLine title="Drainage-Lösungen" color="blue"/>
+                <LeistungLine title="Gartengestaltung" color="blue"/>
+                <LeistungLine title="Pflasterarbeiten" color="blue"/>
+                <LeistungLine title="Sichtschutzzäune und Gabionen" color="blue"/>
+                <LeistungLine title="Grillplätze und gemütliche Sitzecken" color="blue"/>
+                <LeistungLine title="Individuelle Beratung" color="blue"/>
               </div>
             </div>
           </div>
