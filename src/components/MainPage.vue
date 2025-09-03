@@ -9,7 +9,7 @@
 }
 
 .header-outer{
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .header-inner{
@@ -157,7 +157,7 @@
       <div class="center half-width fade-before" :class="fadeHeader ? 'fade-after' : ''">
         <div style="width: 90%">
           <div class="mobile-center-horizontal">
-            <div class="main-tag">Professionelles Handwerk seit 2015</div>
+            <div class="main-tag">Professioneller Fliesenleger seit XXXX</div>
           </div>
           <h1 class="reset-margin main-headline mobile-center-text">Solides <span class="prim-color">Handwerk</span> der Ihren Erwartungen entspricht</h1>
           <p class="default-textsize decent-color fade-before mobile-center-text" :class="fadeSubHeader ? 'fade-after' : ''">Von der Idee bis zum perfekten Ergebnis – ich verwandle Ihre Visionen in greifbare Meisterwerke. Handwerk mit Herz und Verstand.</p>
@@ -175,7 +175,7 @@
         </div>
       </div>
       <div class="center half-width max-height mobile-margin">
-        <img src="../assets/sample-main.jpg" class="max-width fade-before round-corner glow" :class="fadePizza ? 'fade-after' : ''">
+        <img src="../assets/samples/img3.jpeg" class="max-width fade-before round-corner glow" :class="fadePizza ? 'fade-after' : ''">
       </div>
     </div>
   </div>
@@ -193,10 +193,10 @@
           <div class="main-tag">Meine Leistungen</div>
         </div>
         <div class="center-horizontal">
-          <h2 class="huge-headline center-text">Professionelles Handwerk für jeden Bedarf aus einer Hand</h2>
+          <h2 class="huge-headline center-text">Professioneller Fliesenleger für jeden Bedarf aus einer Hand</h2>
         </div>
         <div class="center-horizontal">
-          <p class="decent-color default-textsize reset-margin center-text">Wir bieten Ihnen ein großes Spektrum von Handwerksarbeiten an ihrem Haus und gestalten ihre Außenanlage nach Ihren Wünschen. Durch eine gute Vernetzung mit unseren Partnerbetrieben, sind wir in der Lage auch herausfordernde Projekte zu meistern.</p>
+          <p class="decent-color default-textsize reset-margin center-text">Wir bieten Ihnen ein großes Spektrum von Fliesenarbeiten an ihrem Haus und gestalten ihre Räume nach Ihren Wünschen. Durch eine gute Vernetzung mit unseren Partnerbetrieben, sind wir in der Lage auch herausfordernde Projekte zu meistern.</p>
         </div>
       </div>
     </div>

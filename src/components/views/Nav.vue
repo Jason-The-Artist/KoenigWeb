@@ -105,7 +105,7 @@
     <div class="nav center-horizontal">
       <div class="space-between max-height main-content-width center-vertical">
         <div class="center-vertical">
-          <img src="../../assets/logo.png" class="logo pointer" @click="$router.push('/')">
+          <h2 class="reset-margin prim-color">Fliesenleger</h2>
         </div>
         <div>
           <div class="center-vertical hide-nav">
